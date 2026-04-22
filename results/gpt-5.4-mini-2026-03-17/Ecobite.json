@@ -1,0 +1,1097 @@
+{
+  "model_output_name": "gpt-5.4-mini-2026-03-17",
+  "video_file": "Ecobite.mp4",
+  "providers": [
+    "openai"
+  ],
+  "model_names": [
+    "gpt-5.4-mini-2026-03-17"
+  ],
+  "merged_at": "2026-04-21T11:56:22.555197+00:00",
+  "run_count": 5,
+  "total_criteria_results": 55,
+  "successful_criteria_results": 55,
+  "failed_criteria_results": 0,
+  "runs": [
+    {
+      "run_id": "20260421092213",
+      "created_at": "2026-04-21T09:22:13.917657Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Ecobite.mp4",
+      "run_index": 1,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The product grid becomes visually crowded as more items are added to the cart, with quantity controls appearing inside cards and reducing the consistency of the card layout. This makes the page feel less structured and harder to scan.",
+              "recommendation": "Keep product cards visually stable by moving cart quantity controls to a dedicated cart drawer or separate cart summary, rather than expanding controls inside the grid cards.",
+              "severity": 2
+            },
+            {
+              "description": "The category navigation and product grid compete for attention because the active category state is subtle and the page relies on repeated card imagery without stronger section separation. This weakens the visual hierarchy and makes the layout feel less clearly organized.",
+              "recommendation": "Strengthen section structure with clearer spacing, stronger active-tab styling, and more distinct grouping between filters and results.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on small icon-only affordances, such as the plus button beside the allergy input and the compact +/- quantity controls in product cards. These elements are visible but not strongly distinguished as interactive compared with surrounding text and images.",
+              "recommendation": "Increase the visual affordance of these controls with clearer button styling, larger hit areas, and hover/focus states; add labels or tooltips where the action may be ambiguous.",
+              "severity": 2
+            },
+            {
+              "description": "The category tabs in the product grid look like plain text chips, and their interactive state is subtle until selected. This makes it harder to immediately recognize them as clickable filters.",
+              "recommendation": "Strengthen the tab/button styling with more button-like borders, hover feedback, and a clearer selected state so users can identify them as interactive filters at a glance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Many product cards show only a few fields (name, price, CO₂, tags), but the grid is dense and requires repeated scrolling to compare items across categories. The amount of information per item is inconsistent: some cards expand with quantity controls while others remain minimal, making the list harder to scan.",
+              "recommendation": "Standardize each card to a compact, consistent set of key details and reserve extra controls for a dedicated detail view or expanded state. Keep only the most decision-relevant attributes visible by default and use progressive disclosure for secondary actions.",
+              "severity": 2
+            },
+            {
+              "description": "Some item cards rely on imagery and short tags without enough explanatory context to distinguish similar products, especially when multiple cards in a category look nearly identical. This makes the per-item information less helpful for quick comparison.",
+              "recommendation": "Add one concise differentiator per card, such as a short sustainability note, origin, or a single standout attribute, and ensure it is consistently placed across all items. Use the same information hierarchy for every card so users can compare items at a glance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected state for category tabs changes from a solid green filled pill to a lighter green highlight when hovering or switching categories, making the active/hover styling inconsistent across the same navigation control.",
+              "recommendation": "Use one consistent visual treatment for tab states (e.g., one fill color for active, one distinct hover state) and apply it uniformly to all category tabs.",
+              "severity": 2
+            },
+            {
+              "description": "Product cards use different interaction patterns for the same add-to-cart action: some show a single green \"Add to Cart\" button, while others switch to a quantity stepper with minus/check/plus controls after selection.",
+              "recommendation": "Standardize the cart interaction across all product cards by using the same control pattern and state transitions for every item.",
+              "severity": 2
+            },
+            {
+              "description": "The cart badge in the top navigation changes from \"0 View Cart\" to \"1 View Cart\", \"2 View Cart\", etc., mixing the count with the label in a way that is inconsistent with the rest of the header text.",
+              "recommendation": "Separate the cart count from the label consistently, such as using a badge icon with a numeric count and a fixed \"View Cart\" label.",
+              "severity": 1
+            },
+            {
+              "description": "The toggle switches in the preference form use different visual states and surrounding emphasis when turned on versus off, while the rest of the form remains visually unchanged, creating uneven state presentation across similar controls.",
+              "recommendation": "Apply a consistent toggle style and state color treatment for all switches, and keep the surrounding layout unchanged when a toggle is activated unless additional fields are intentionally revealed.",
+              "severity": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The preference setup relies mainly on sliders and a few toggles; there is no visible way to express positive likes/dislikes or rate individual products before shopping. This limits users to broad preference tuning rather than explicit item-level preference input.",
+              "recommendation": "Add clear explicit preference controls such as like/dislike buttons, star ratings, or save/favorite actions on products, and surface them in the onboarding flow and product cards.",
+              "severity": 3
+            },
+            {
+              "description": "The dietary preference section only exposes a small set of preset toggles plus one free-text allergy field, so users cannot visibly choose from a broader set of categories or preferences. This makes it hard to express more specific preferences beyond the provided options.",
+              "recommendation": "Provide a richer preference picker with selectable categories/tags and multi-select chips for common dietary and product preferences, alongside the existing free-text field for custom entries.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The product list updates immediately as preferences are changed, but the interface does not explain which specific inputs caused each recommendation to appear or disappear. Users can see that results change, yet the relationship between their settings and the ranked items remains opaque.",
+              "recommendation": "Add per-item explanations such as \"Recommended because you prioritized low carbon and budget\" and provide a visible summary of active filters/weights that drive the current results.",
+              "severity": 3
+            },
+            {
+              "description": "The preference controls show labels like \"Medium Priority\" and \"Certified,\" but they do not indicate how much each setting influences the recommendation algorithm relative to the others. This makes it hard to understand the impact of adjusting one slider versus another.",
+              "recommendation": "Show a simple weighting or impact indicator next to each control, and update it live so users can see how strongly each preference affects recommendations.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The preference sliders appear to have no visible undo/reset control after changes are made, so users cannot easily revert accidental adjustments. This is especially problematic for the onboarding preferences where multiple values are set in sequence.",
+              "recommendation": "Add a clear reset/undo action for each slider or a global \"Reset preferences\" control, and preserve the previous state until the user confirms changes.",
+              "severity": 3
+            },
+            {
+              "description": "The dietary constraint chips can be added and removed, but there is no visible way to edit an entered allergy value once it has been added; users must remove and re-enter it. This makes correcting mistakes slower than necessary.",
+              "recommendation": "Allow inline editing of added constraint chips or provide an edit icon next to each chip so users can modify entries without deleting them first.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Product cards in the shopping grid do not visibly indicate that they are recommendations; they look like standard catalog items with only labels such as \"Local\" or \"Organic.\"",
+              "recommendation": "Add a clear recommendation marker near the top of each card or section header, such as \"Recommended for you\" or \"Suggested based on your preferences.\"",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards in the product grid are visually differentiated only by small badges such as \"Local\" or \"Organic,\" while the overall card layout and styling remain the same. This makes it hard to quickly tell why one item is being recommended versus another.",
+              "recommendation": "Add a clear recommendation label or short explanation on each card (for example, \"Because you chose low-carbon\" or \"Matches your vegan preference\") and use consistent visual grouping for each recommendation type.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "The product cards in the shopping view show price, CO₂, and tags, but no visible explanation of why each item was recommended. Users cannot tell which preferences or criteria drove the ranking.",
+              "recommendation": "Add a short 'Why recommended' explanation on each card, such as matching carbon priority, budget sensitivity, or dietary preferences, with the specific factors highlighted.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards do not show any explicit controls to hide, save, or rate items; the only visible action is adding to cart. Users cannot directly provide preference feedback on individual recommendations from the list view.",
+              "recommendation": "Add clear per-item actions such as thumbs up/down, hide, and save/bookmark buttons on each recommendation card, with immediate feedback after selection.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421092213.json"
+    },
+    {
+      "run_id": "20260421092658",
+      "created_at": "2026-04-21T09:26:58.785158Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Ecobite.mp4",
+      "run_index": 2,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The product grid becomes visually crowded as more items are added, with repeated cards and controls extending far down the page without stronger section separation or grouping. This makes the overall structure harder to scan and understand at a glance.",
+              "recommendation": "Group products into clearer sections or use pagination/infinite loading with stronger spacing and headings between blocks. Consider reducing repeated visible controls until a card is focused or expanded.",
+              "severity": 2
+            },
+            {
+              "description": "The category navigation and product cards rely on similar green highlights and repeated card layouts, which makes the page feel visually uniform rather than clearly structured by hierarchy. Important areas such as filters, selected categories, and product actions do not stand out enough from surrounding content.",
+              "recommendation": "Strengthen visual hierarchy with clearer section headers, more distinct filter styling, and stronger separation between navigation, filters, and results. Use consistent card spacing and a more prominent active-state treatment for the selected category.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on subtle visual cues: the sliders use small circular handles with minimal contrast against the track, and the plus/minus quantity controls are compact and visually understated. These elements are recognizable only after hovering or interacting, which makes them less immediately apparent as interactive.",
+              "recommendation": "Increase the visual affordance of controls by using larger handles/buttons, stronger contrast, and clearer hover/focus states. Consider adding explicit icons or labels for slider handles and making quantity controls more button-like.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Product cards show only a few fields (name, price, CO₂, tags, add-to-cart), but the recommendation context is otherwise sparse, so users cannot quickly understand why items differ or compare them beyond the visible labels.",
+              "recommendation": "Add one short, consistent explanation per item such as a ranked reason or key tradeoff (for example, \"lower CO₂, higher price\") and keep the rest of the card compact.",
+              "severity": 2
+            },
+            {
+              "description": "Several cards rely on small badges and a CO₂ value as the main differentiators, which makes the amount of item information feel uneven and sometimes too minimal for informed comparison.",
+              "recommendation": "Standardize the item summary to include the same core attributes on every card, and prioritize the most decision-relevant ones while moving secondary details into an expandable view.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The category tabs use inconsistent active-state styling: some selected tabs appear with a darker green fill while others show a lighter green highlight, making the same control look different across categories.",
+              "recommendation": "Use one consistent active-tab style for all categories, with the same fill color, text color, and border treatment.",
+              "severity": 2
+            },
+            {
+              "description": "The product cards use different interaction patterns for the same add-to-cart action: some show a single green \"Add to Cart\" button, while others switch to a quantity stepper with different icons and controls after selection.",
+              "recommendation": "Standardize the cart interaction so every product card follows the same visual pattern before and after adding an item, or clearly label the state change with consistent controls.",
+              "severity": 2
+            },
+            {
+              "description": "The preference sliders mix different visual conventions across rows, including varying right-side value labels and inconsistent emphasis between the filled track and the labels, which makes similar controls feel mismatched.",
+              "recommendation": "Apply one slider template across all preference rows with the same label placement, value formatting, and track styling.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface exposes only a limited set of explicit preference controls: three sliders and a few hard-filter toggles. There is no visible way to express positive preferences such as likes/dislikes or to rate individual items while browsing products.",
+              "recommendation": "Add item-level preference actions on product cards, such as like/dislike, star ratings, or save-for-later, and surface them consistently in the browsing view.",
+              "severity": 3
+            },
+            {
+              "description": "Preference input is split across multiple sections, but the browsing page itself shows only add-to-cart actions and category tabs. Users cannot explicitly mark preferences directly from the recommendation results they are evaluating.",
+              "recommendation": "Provide quick preference controls on each recommendation card, such as thumbs up/down or category tags, so users can refine recommendations without leaving the results page.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The preference sliders show labels like Low/High Priority and a few summary values, but the interface does not explain how each setting changes the recommendations or how much influence each control has. Users cannot tell what changing a slider will do before they start shopping.",
+              "recommendation": "Add short, inline explanations next to each control that state how the setting affects ranking or filtering, and include a simple preview or example of the resulting recommendation changes.",
+              "severity": 3
+            },
+            {
+              "description": "The dietary constraint toggles are described as hard filters, but the screen does not clearly show which recommendations will be removed or how the selected allergy text is used. The effect of entering an allergy and pressing the add button is not transparent from the interface alone.",
+              "recommendation": "Show immediate feedback after each dietary input, such as a count or list of excluded items and a note explaining that matching products will be hidden from results.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The preference sliders appear to have no visible undo or reset control after values are changed, so users cannot easily revert accidental adjustments. This is especially noticeable when the sliders are moved to different positions and the only way back is manual readjustment.",
+              "recommendation": "Add a clear reset/undo action for the preference matrix, such as per-slider reset icons or a global \"Reset preferences\" button, and preserve the previous values until the user confirms changes.",
+              "severity": 3
+            },
+            {
+              "description": "The dietary constraint inputs allow adding an allergy term, but there is no visible way to edit the entered value once it has been added beyond removing and retyping it. This limits flexibility when users need to correct a typo or refine a constraint.",
+              "recommendation": "Make added allergy chips editable in place or provide an explicit edit action alongside the remove control, so users can modify entries without deleting and re-entering them.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Recommendation labels are not consistently visible on the product cards; items are presented as ordinary catalog tiles with only small tags like \"Local\" or \"Organic,\" which do not clearly indicate that the items are system-generated recommendations.",
+              "recommendation": "Add a prominent section heading such as \"Recommended for you\" and/or a clear badge on each recommended card (for example, \"Recommended\") so users can immediately distinguish recommendations from regular products.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled only by category and product details; the interface does not visibly explain why a specific item is recommended (for example, based on prior likes or profile settings). This makes different recommendation types hard to distinguish.",
+              "recommendation": "Add short, visible explanation labels on each card such as \"Because you liked...\", \"Matches your carbon goal\", or \"Best value\" so users can tell why each item is shown.",
+              "severity": 3
+            },
+            {
+              "description": "In the product grid, items that appear to be recommendation-driven are visually similar to regular catalog items, with no clear badges or grouping to separate personalized suggestions from standard browse results.",
+              "recommendation": "Use distinct section headers or badges to separate recommendation types, such as \"Recommended for you\", \"Low-carbon picks\", and \"Budget-friendly\", and keep each type visually consistent.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items show labels like Local, Organic, Low-Carbon, and Premium, but the interface does not explain why a specific item received those recommendations or how the user’s preferences affected them.",
+              "recommendation": "Add a short \"Why recommended\" explanation on each product card or in a details panel that maps the item to the user’s selected preferences and scoring factors.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards only expose an \"Add to Cart\" action; there are no visible controls to rate, hide, or save items directly from the recommendation list.",
+              "recommendation": "Add clear per-item actions such as thumbs up/down, hide, and save/bookmark buttons on each recommendation card.",
+              "severity": 3
+            },
+            {
+              "description": "The recommendation list provides no visible feedback controls after adding items, so users cannot easily indicate preference beyond purchase behavior.",
+              "recommendation": "Include lightweight feedback actions on each card and confirm their effect immediately so users can refine future recommendations without buying first.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421092658.json"
+    },
+    {
+      "run_id": "20260421093114",
+      "created_at": "2026-04-21T09:31:14.790161Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Ecobite.mp4",
+      "run_index": 3,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The product grid becomes visually crowded as more items load, with cards extending far down the page and little separation between sections. This makes the overall structure harder to scan and weakens the sense of hierarchy.",
+              "recommendation": "Group products into clearer sections with stronger spacing or pagination, and consider limiting the number of visible cards per view. Add more distinct section headers or dividers to reinforce the page structure.",
+              "severity": 2
+            },
+            {
+              "description": "The category navigation and product cards compete for attention because the active category state is subtle and the grid remains visually dense. The layout does not clearly guide the eye from category selection to the relevant results.",
+              "recommendation": "Make the active category state more prominent and add a clearer visual break between the filter bar and the results grid. Consider using a sticky filter row or a results header to improve structure.",
+              "severity": 2
+            },
+            {
+              "description": "The preference controls on the onboarding screen are arranged in a long single column with repeated sliders and toggles, which creates a lengthy, monotonous layout. The lack of stronger grouping makes it harder to distinguish separate preference areas at a glance.",
+              "recommendation": "Break the form into clearly labeled sections or cards with stronger spacing and separators. Use progressive disclosure or step-based grouping to reduce visual clutter and improve structure.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The category tabs in the product grid are styled like plain text pills, and only the active tab is strongly highlighted, so the inactive tabs are not immediately recognizable as interactive elements.",
+              "recommendation": "Increase button-like affordance for all category tabs using clearer borders, hover states, and consistent padding so they read as clickable controls.",
+              "severity": 2
+            },
+            {
+              "description": "The plus/minus quantity controls on product cards are small and visually subtle, making them easy to overlook as interactive controls.",
+              "recommendation": "Enlarge the quantity buttons and add stronger contrast or button styling so their clickability is obvious at a glance.",
+              "severity": 2
+            },
+            {
+              "description": "The small checkmark/quantity indicator between the minus and plus buttons looks like static text rather than an interactive control, which may confuse users about what can be clicked.",
+              "recommendation": "Replace the ambiguous middle indicator with a clearer quantity display and keep only the actual controls styled as buttons.",
+              "severity": 2
+            },
+            {
+              "description": "The toggle switches in the dietary constraints section are low-contrast and minimal, so their interactive nature is not immediately obvious.",
+              "recommendation": "Use more distinct switch styling with clearer on/off contrast and a stronger thumb/track separation to make them easier to recognize as toggles.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Product cards show only a few fields (name, price, CO₂, tags, add-to-cart), but the recommendation context is otherwise sparse, so users may not understand why items differ or which attributes matter most.",
+              "recommendation": "Add one short explanation line per card or a compact details drawer with the key recommendation factors and their values.",
+              "severity": 2
+            },
+            {
+              "description": "Several cards rely on small badges and a tiny CO₂ value as the main differentiators, which makes the amount of item information feel inconsistent and hard to scan across many products.",
+              "recommendation": "Standardize the card layout so each item shows the same core attributes in the same order, and keep secondary tags collapsed or grouped.",
+              "severity": 2
+            },
+            {
+              "description": "The preference matrix uses sliders with minimal numeric feedback, so the item-level information shown later may not clearly reflect the user’s chosen priorities.",
+              "recommendation": "Show explicit values or labels for each slider position and summarize the active preferences above the product grid.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The category tabs use a green filled pill for the active tab, but the same green is also used for product badges and primary action buttons, making the selected state visually blend with unrelated controls. This reduces consistency in how green is interpreted across the interface.",
+              "recommendation": "Reserve the filled green style for one control type, and use a different active-tab treatment (e.g., underline, border, or lighter fill) so tabs are clearly distinct from buttons and badges.",
+              "severity": 2
+            },
+            {
+              "description": "The product cards mix multiple badge colors and styles for similar metadata, such as green and blue tags for labels like Local and Organic, plus gray tags for other attributes. The visual language for these labels is not consistent across the catalog.",
+              "recommendation": "Standardize badge styling by assigning one color or style per label category and applying it consistently across all product cards.",
+              "severity": 2
+            },
+            {
+              "description": "The quantity controls that appear after adding items to cart use a different visual pattern from the main green Add to Cart buttons, with small white minus/plus buttons and a checkmark in the middle. The change in control style is abrupt and can make related actions feel inconsistent.",
+              "recommendation": "Use a consistent button style family for cart actions, or clearly separate the quantity stepper as a distinct component with a standardized design used everywhere it appears.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The initial preference setup only exposes sliders and a few dietary toggles; there is no visible way to explicitly rate individual products or mark likes/dislikes on the recommendation cards themselves.",
+              "recommendation": "Add direct feedback controls on product cards, such as like/dislike buttons or star ratings, and persist those signals to the profile.",
+              "severity": 3
+            },
+            {
+              "description": "Preference input is limited to a small set of preset categories and one free-text allergy field, so users cannot clearly express more specific tastes or additional preference categories beyond what is shown.",
+              "recommendation": "Provide editable preference categories and multi-select controls for more preference types, with an option to add custom categories or tags.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The product cards show eco labels and CO₂ values, but the interface does not explain how the preference sliders change which items are recommended or ranked. Users can adjust values without seeing any immediate explanation of the recommendation logic or weighting.",
+              "recommendation": "Add inline feedback that updates after each preference change, such as a short explanation of why items moved up or down and which criteria influenced the result most.",
+              "severity": 3
+            },
+            {
+              "description": "The dietary constraint toggles and allergy entry field do not indicate how these inputs affect the recommendation set until after shopping begins. The user can enter preferences, but the impact on filtering is not visible at the point of input.",
+              "recommendation": "Show a live summary of active filters and a preview of excluded items or counts as constraints are added, so users can see the effect before starting shopping.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The preference sliders appear to have no visible reset, undo, or clear-all control, so users cannot easily revert accidental changes while configuring their profile.",
+              "recommendation": "Add a clear reset/undo action near the preference controls, and consider showing a temporary undo toast after each change.",
+              "severity": 2
+            },
+            {
+              "description": "The dietary constraint section uses toggles and a text field, but there is no visible way to remove an entered allergy except by interacting with the chip after it appears; this makes correction less discoverable.",
+              "recommendation": "Provide an explicit remove/clear control for entered allergy tags and a visible reset option for the whole dietary section.",
+              "severity": 2
+            },
+            {
+              "description": "In the product grid, items can be added to the cart, but no visible remove/undo action appears after adding; the cart count changes, yet the recording does not show an easy way to reverse the last add from the product card.",
+              "recommendation": "Show a brief undo action after add-to-cart and make remove/decrement controls immediately visible on the card or in a persistent cart panel.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Product cards in the shopping grid are not clearly labeled as recommendations; they appear as standard catalog items with only small tags like \"Local\" or \"Organic,\" which do not indicate that the items are system-generated suggestions.",
+              "recommendation": "Add a clear section heading such as \"Recommended for you\" above the grid and/or a visible \"Recommended\" badge on each suggested item to distinguish recommendations from the general catalog.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled only by category and product details; the interface does not visibly explain why a specific item is recommended (for example, based on prior likes or profile settings). This makes different recommendation types hard to distinguish.",
+              "recommendation": "Add short, visible explanation labels on each card such as \"Because you liked...\", \"Matches your carbon goal\", or \"Budget-friendly pick\" so users can tell why each item appears.",
+              "severity": 3
+            },
+            {
+              "description": "In the product grid, items that appear to be recommendation-driven are mixed with standard browsing results, but there is no clear visual separation or heading indicating which items are personalized versus general catalog items.",
+              "recommendation": "Group personalized recommendations into a clearly titled section and use distinct badges or styling to separate them from regular browse results.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items are shown with labels like Local, Organic, Premium, or Low-Carbon, but the interface does not explain why each item was recommended or how those labels relate to the user's selected preferences.",
+              "recommendation": "Add a short 'Why recommended' explanation on each card or in a tooltip/popover that maps the item to the specific preference signals used.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards do not expose any visible controls to rate, hide, or save items; the only direct action shown is adding products to the cart. Users cannot provide explicit feedback on recommendations from the browsing view.",
+              "recommendation": "Add clear per-item feedback actions on each recommendation card, such as thumbs up/down, hide, and save/bookmark, and make them consistently visible without requiring navigation away from the list.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421093114.json"
+    },
+    {
+      "run_id": "20260421093504",
+      "created_at": "2026-04-21T09:35:04.170016Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Ecobite.mp4",
+      "run_index": 4,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The product grid is visually dense and extends far down the page with many similarly styled cards, making it hard to quickly distinguish sections or scan the layout. The repeated card pattern and minimal spacing between rows reduce visual hierarchy.",
+              "recommendation": "Group products into clearer sections with stronger headings, increase vertical spacing between rows, and consider limiting the number of visible cards per view with pagination or a more compact grid.",
+              "severity": 2
+            },
+            {
+              "description": "The category navigation bar is long and crowded, with many tabs competing for attention in a single row. This makes the layout feel horizontally overloaded and weakens the overall structure.",
+              "recommendation": "Split categories into fewer top-level groups, use a secondary filter panel or dropdown for less common categories, and add clearer visual separation between the navigation and product area.",
+              "severity": 2
+            },
+            {
+              "description": "The preference controls and product cards use very similar visual styling, so the page lacks clear separation between configuration areas and shopping content. As the user scrolls, the structure becomes harder to follow.",
+              "recommendation": "Visually differentiate the preference section from the catalog using stronger section dividers, background shading, or card containers with clearer headers and consistent alignment.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The category tabs in the product grid are styled like plain text pills, and only the active tab is strongly highlighted, making the inactive tabs less obviously interactive at a glance.",
+              "recommendation": "Increase button-like affordance for all tabs with clearer borders, hover states, and consistent spacing so users can immediately recognize them as clickable filters.",
+              "severity": 2
+            },
+            {
+              "description": "The plus/minus quantity controls on product cards are small and visually subtle, so their clickability is not immediately obvious compared with the surrounding card content.",
+              "recommendation": "Enlarge the control hit areas and add stronger button styling or icons with clearer contrast to make the increment/decrement actions stand out as interactive elements.",
+              "severity": 2
+            },
+            {
+              "description": "The toggle switches in the preference form are very light gray when off and have minimal visual emphasis, which makes them easy to overlook as interactive controls.",
+              "recommendation": "Use higher-contrast switch styling and add clearer labels or helper text near the toggles so their interactive nature is more apparent.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Recommendation cards show only a product image, name, price, CO₂ value, and a few tags, which makes the items feel sparse and hard to compare beyond the most basic attributes.",
+              "recommendation": "Add one or two high-value details per card, such as a short reason for recommendation, key sustainability metric, or a concise product summary, while keeping the layout compact.",
+              "severity": 2
+            },
+            {
+              "description": "The product grid uses very large cards with substantial whitespace, so each item occupies a lot of screen space without adding much information.",
+              "recommendation": "Reduce card height and tighten spacing so more items are visible at once, or use denser list-style cards for browsing and comparison.",
+              "severity": 2
+            },
+            {
+              "description": "Several product cards rely on repeated visual elements and minimal text, which makes it difficult to distinguish similar items quickly when scanning the catalog.",
+              "recommendation": "Differentiate items with clearer metadata hierarchy, such as highlighting the most relevant attribute first and grouping secondary tags consistently.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The category tabs use inconsistent active-state styling: some selected tabs appear with a bright green filled background while others briefly show a lighter/hover-like highlight before settling, making the selection state less uniform across the interface.",
+              "recommendation": "Use one consistent active-tab style for all categories and ensure hover, focus, and selected states are visually distinct but not easily confused.",
+              "severity": 2
+            },
+            {
+              "description": "The product cards use the same green color for multiple meanings, including category tags, add-to-cart buttons, and selected quantity indicators, which makes different interface elements look interchangeable.",
+              "recommendation": "Reserve green for one primary meaning (e.g., selection or primary action) and use separate, consistent colors or neutral styling for tags and quantity states.",
+              "severity": 2
+            },
+            {
+              "description": "The quantity controls on product cards change appearance after adding items, but the visual treatment is not consistent across cards and states, with some showing a checkmark/number block while others still show the add button.",
+              "recommendation": "Standardize the post-add state for all product cards so the same control pattern and iconography are used everywhere once an item is in the cart.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface lets users set broad preference priorities with sliders and a few dietary toggles, but it does not show any explicit like/dislike or rating controls for individual products in the shopping view. Users can only add items to cart, which is not a direct preference signal.",
+              "recommendation": "Add visible per-item preference actions such as thumbs up/down, star ratings, or save/skip controls on product cards so users can explicitly express item-level preferences.",
+              "severity": 3
+            },
+            {
+              "description": "Preference input is limited to a small set of preset categories and one free-text allergy field; there is no visible way to express positive preferences for categories or brands beyond the provided sliders. This makes preference expression narrow and indirect.",
+              "recommendation": "Provide additional preference controls for categories and product attributes, such as selectable liked categories, favorite brands, and optional free-text preference tags.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows a few preference controls and labels, but it does not explain how those inputs change the ranking or filtering of the product recommendations on the shopping page. Users can adjust sliders and toggles without seeing any immediate, item-level explanation of what changed or why.",
+              "recommendation": "Add live feedback that shows how each control affects recommendations, such as updated scores, highlighted matching attributes, and a short explanation on each product card (e.g., \"shown because low CO₂ and local\").",
+              "severity": 3
+            },
+            {
+              "description": "The shopping results display product attributes like CO₂ and tags, but there is no visible connection back to the user’s selected preferences, so it is unclear which inputs influenced the current set of recommendations. The page also lacks a summary of the active preference profile after submission.",
+              "recommendation": "Show an active preference summary above the results and include per-item explanation chips or a \"Why recommended\" link that maps each recommendation to the specific user inputs that contributed to it.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The preference sliders appear to have no visible reset, undo, or skip controls, so users must manually drag each control to change their inputs. This makes it harder to quickly revise preferences after experimenting.",
+              "recommendation": "Add explicit reset/undo controls for the preference section, and provide a clear skip or continue-with-defaults option for users who do not want to configure every setting.",
+              "severity": 2
+            },
+            {
+              "description": "The dietary constraints section uses toggle switches and a text field, but there is no visible way to remove an entered allergy except by interacting with the small chip, and no obvious undo for accidental additions. This can make correcting inputs less discoverable.",
+              "recommendation": "Provide a clearly labeled remove action for each entered allergy and an undo or edit affordance near the input so users can easily correct mistakes.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Product cards in the shop grid do not visibly distinguish recommended items from the rest; the same card layout and green action buttons are used throughout, so recommendations are not clearly labeled as recommendations.",
+              "recommendation": "Add an explicit label or badge such as \"Recommended for you\" on recommended cards, and visually separate them from non-recommended items with a dedicated section header or grouping.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled only by product name and small tags, so the interface does not clearly distinguish why items are being recommended (e.g., eco-friendly, local, premium, or alternative).",
+              "recommendation": "Add explicit recommendation labels or badges on each card such as \"Because you chose vegan\" or \"Low-carbon pick,\" and keep the reason visible near the product title.",
+              "severity": 3
+            },
+            {
+              "description": "The category tabs change the product set, but the screen does not clearly indicate that these are different recommendation types versus simple browsing filters.",
+              "recommendation": "Use distinct section headings or explanatory labels for each recommendation group, and visually separate personalized collections from general category browsing.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items are shown with labels like Local, Organic, Premium, or Low-Carbon, but the interface does not explain why each specific item was recommended or how those labels relate to the user's preferences. The only visible explanation is a generic statement about transparent metrics, which is not item-specific.",
+              "recommendation": "Add a short \"Why recommended\" explanation on each product card or in a detail panel, explicitly linking the item to the user's selected priorities (for example, \"Low CO₂ and matches your local preference\").",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards do not show any visible controls for rating, hiding, or saving items; the only direct action shown is adding to cart. Users cannot easily provide feedback on recommendations themselves.",
+              "recommendation": "Add explicit per-item feedback actions on each recommendation card, such as thumbs up/down, hide, and save/bookmark buttons, with clear labels or tooltips.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421093504.json"
+    },
+    {
+      "run_id": "20260421093922",
+      "created_at": "2026-04-21T09:39:22.422926Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Ecobite.mp4",
+      "run_index": 5,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The product grid is visually dense and extends far down the page, with many similarly styled cards and little separation between sections. This makes the overall structure harder to scan and weakens the sense of hierarchy.",
+              "recommendation": "Group products into clearer sections with stronger spacing or dividers, and reduce the number of visible cards per viewport by adding pagination or a more compact layout.",
+              "severity": 2
+            },
+            {
+              "description": "The category navigation appears as a long horizontal row of tabs with many similar labels, which competes with the product grid for attention. The active state is subtle, so the current section is not immediately obvious.",
+              "recommendation": "Use a more prominent active tab style and consider collapsing categories into a filter bar or dropdown to reduce visual clutter.",
+              "severity": 2
+            },
+            {
+              "description": "The cart badge and quantity controls inside product cards add multiple small UI elements within an already crowded grid, making the layout feel busy. These controls interrupt the card structure and reduce visual clarity.",
+              "recommendation": "Move secondary controls into a cleaner card footer or reveal them on hover/selection, and keep the default card view focused on the product image, name, price, and primary action.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The quantity controls on product cards are only clearly recognizable after hover/interaction; before that, the minus/plus buttons and the center quantity indicator are visually subtle and can be mistaken for static decoration.",
+              "recommendation": "Increase the visual affordance of the quantity controls with stronger borders, clearer button shapes, and persistent labels or icons that remain obvious without hover.",
+              "severity": 2
+            },
+            {
+              "description": "The small toggle switches in the dietary constraints section are low-emphasis and easy to overlook, especially because they sit far to the right of the labels.",
+              "recommendation": "Make the toggles larger and more contrasted, and place them closer to their labels or use full-width selectable rows to make them easier to identify as interactive.",
+              "severity": 2
+            },
+            {
+              "description": "The small plus button beside the allergy text field is not immediately recognizable as an action control compared with the surrounding input area.",
+              "recommendation": "Use a more explicit button style and label such as \"Add\" or an icon with stronger contrast so users can quickly identify it as clickable.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Product cards show only a few high-level cues (name, price, CO₂, tags), but no short explanatory detail about why an item is recommended or what the tags mean. This makes the item information feel sparse and less helpful for comparing similar products.",
+              "recommendation": "Add one concise explanation line per card, such as the main recommendation reason or a brief metric summary, and provide tooltip/help text for tags like \"Local\" or \"Organic\".",
+              "severity": 2
+            },
+            {
+              "description": "The category grid presents many visually similar cards with repeated imagery and minimal differentiating information, so users must inspect multiple items to understand differences. This increases scanning effort when comparing products.",
+              "recommendation": "Surface one or two additional differentiators on each card, such as key attributes or a compact comparison metric, and consider a compare view for similar items.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The category tabs use inconsistent active-state styling: some selected tabs appear as solid green pills while others briefly show a lighter green hover/selection state before settling, making the selection cue inconsistent across the same control set.",
+              "recommendation": "Use one fixed active-tab style for all categories and ensure hover, focus, and selected states are visually distinct but consistent across every tab.",
+              "severity": 2
+            },
+            {
+              "description": "The product cards use mixed interaction feedback for the same add-to-cart action: some items show only the green button, while others switch to a quantity stepper with a checkmark after selection, changing the control pattern within the same grid.",
+              "recommendation": "Standardize the add-to-cart interaction across all product cards, either by always using the same button or by consistently replacing it with the same quantity control after selection.",
+              "severity": 2
+            },
+            {
+              "description": "The dietary preference controls mix different visual patterns and label treatments, including toggle switches, a text input with a plus button, and slider-like controls elsewhere on the page, which makes related preference inputs feel inconsistent.",
+              "recommendation": "Group preference inputs by type and apply a consistent visual language for each category, with uniform labels, spacing, and control styling across the form.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface lets users set broad preference sliders and a few dietary toggles, but it does not show any explicit rating or like/dislike controls for individual items in the browsing view. Users can only express preferences indirectly through cart actions and category tabs.",
+              "recommendation": "Add clear per-item preference actions such as thumbs up/down, star ratings, or save/skip controls directly on product cards so users can explicitly signal what they like or dislike.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that preferences affect recommendations, but it does not explain how the slider positions translate into ranking changes or how much each preference is weighted. Users can adjust values without understanding what recommendation outcome to expect.",
+              "recommendation": "Add inline explanations or a live preview that shows how each slider changes the recommendation mix, including relative weighting and example before/after results.",
+              "severity": 3
+            },
+            {
+              "description": "The dietary constraint toggles are labeled, but the screen does not explain how enabling them changes recommendations beyond removing items. The effect on the recommendation set is therefore only partially transparent.",
+              "recommendation": "Show a short explanation next to each constraint and update the product list or a summary panel immediately to indicate which items were filtered out and why.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The preference sliders appear to be adjustable only by dragging the thumb; no visible reset, undo, or direct-value input is shown for correcting a mistaken setting. This makes it harder for users to recover from accidental changes or return to a previous preference state.",
+              "recommendation": "Add explicit reset/undo controls and allow keyboard or numeric adjustment for each slider so users can quickly revert or fine-tune values.",
+              "severity": 2
+            },
+            {
+              "description": "The selected dietary constraint can be added, but the recording does not show any visible way to remove the entered allergy tag once it has been added. Without a clear delete action, users may be stuck with an incorrect input.",
+              "recommendation": "Provide a clearly visible remove control on each added tag and a simple clear-all option for the dietary constraint field.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Product cards in the shopping grid show badges like \"Local,\" \"Organic,\" and \"Premium,\" but these are not clearly presented as recommendation labels, so it is unclear which items are algorithmically recommended versus simply categorized products.",
+              "recommendation": "Add a visible section heading or badge such as \"Recommended for you\" above the relevant items, and use a consistent visual treatment to distinguish recommendations from standard catalog labels.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation labels are only partially distinguishable: many product cards show generic tags like \"Fresh\" or \"Organic\" without any visible explanation of why a specific item was recommended. In the list view, the recommendation rationale is not clearly separated from ordinary product attributes.",
+              "recommendation": "Add a dedicated, visually distinct \"Why recommended\" line on each card (for example, \"Because you liked local produce\" or \"Matches your low-carbon preference\") and keep it separate from product attribute tags.",
+              "severity": 3
+            },
+            {
+              "description": "The interface shows multiple recommendation-related cues (e.g., eco-score, tags, and category filters), but they are not clearly differentiated by meaning or hierarchy. This makes it hard to tell which elements explain the recommendation versus which are just product metadata or browsing controls.",
+              "recommendation": "Use consistent visual styling for recommendation explanations, such as a labeled badge or expandable explanation panel, and reserve other tag styles for product attributes and filters.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended products are shown with labels like \"Local,\" \"Organic,\" or CO₂ values, but the interface does not explain why a specific item was recommended or how those attributes influenced ranking. Users can see product attributes, yet the recommendation rationale remains implicit.",
+              "recommendation": "Add a short \"Why recommended\" explanation on each card or in a details panel that explicitly links the item to the user's selected preferences (for example, \"Matches your high carbon priority and budget\").",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards do not show any visible controls for rating, hiding, or saving items; the only interaction shown is adding products to the cart. Users cannot directly give feedback on recommendations from the list view.",
+              "recommendation": "Add clear per-item actions such as thumbs up/down, hide, and save/bookmark buttons on each recommendation card, with immediate visual confirmation after use.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421093922.json"
+    }
+  ]
+}

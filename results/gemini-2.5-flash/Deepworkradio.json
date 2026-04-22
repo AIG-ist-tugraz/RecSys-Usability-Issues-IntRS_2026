@@ -1,0 +1,775 @@
+{
+  "model_output_name": "gemini-2.5-flash",
+  "video_file": "Deepworkradio.mp4",
+  "providers": [
+    "gemini"
+  ],
+  "model_names": [
+    "gemini-2.5-flash"
+  ],
+  "merged_at": "2026-04-21T11:56:22.548608+00:00",
+  "run_count": 5,
+  "total_criteria_results": 55,
+  "successful_criteria_results": 55,
+  "failed_criteria_results": 0,
+  "runs": [
+    {
+      "run_id": "20260421075257",
+      "created_at": "2026-04-21T07:52:57.481608Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 1,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The numbered boxes in the 'Your Personal Music Engine' section (0:17) visually resemble interactive steps or buttons, but they are not clickable, creating a false affordance.",
+              "recommendation": "Differentiate the visual design of these informational boxes from interactive elements, or make them clickable to navigate to relevant sections if they are intended to be interactive.",
+              "severity": 2
+            },
+            {
+              "description": "The circular arrow icon next to the skip button in the music player (1:00, 1:18) does not clearly communicate its function of recalibrating the playlist, which is a key interaction.",
+              "recommendation": "Use a more descriptive icon or add a text label (e.g., 'Recalibrate') to clearly indicate the purpose of this button.",
+              "severity": 3
+            },
+            {
+              "description": "The small blue dot on the progress bar (1:03), used for rating the track's effectiveness, is not clearly recognizable as an interactive control for providing feedback.",
+              "recommendation": "Redesign the rating mechanism to be more distinct from the progress bar, perhaps using a dedicated icon or a more standard rating input.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "The 'Avg Track Duration' in the 'Session History' and individual track durations in the 'Session Timeline' display negative values (e.g., '-1m -17s'), which is incorrect and unhelpful for understanding session performance.",
+              "recommendation": "Correct the calculation and display logic to ensure all track durations are non-negative and accurately reflect session performance.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider, which the user interacts with, lacks clear labels or context to explain what preference is being expressed. The percentage value is abstract, making it difficult for the user to understand the meaning or impact of their input.",
+              "recommendation": "Provide clear descriptive labels for the 'QI' slider's purpose and its range (e.g., 'Focus Level: Distracting <-> Immersive') or replace it with a more universally understood preference input like a thumbs up/down or a star rating.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When the user selects \"Too Busy\" for recalibration, the interface provides a textual toast notification (\"Complexity Reduced. Switching to more minimalist tracks.\") but lacks clear visual indicators in the \"Now Playing\" or \"Audio Profile\" sections to demonstrate how the music's \"busyness\" or \"complexity\" has been adjusted.",
+              "recommendation": "Introduce a visual element or a more specific textual descriptor within the \"Now Playing\" or \"Audio Profile\" display that dynamically reflects changes in music complexity or busyness, similar to how BPM changes are shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The interface lacks a clear and direct mechanism for users to provide feedback (e.g., like/dislike) on individual tracks during playback. The 'flow match' slider appears to be a display of the system's assessment rather than an interactive user input.",
+              "recommendation": "Implement explicit 'like' or 'dislike' buttons for tracks, or clearly indicate how the 'flow match' slider can be used by the user to provide feedback, to allow users to directly influence future recommendations.",
+              "severity": 2
+            },
+            {
+              "description": "Users have limited control over the 'Up Next In Queue' list, with no visible options to reorder, remove, or skip to specific tracks within the queue. This restricts flexibility in managing the upcoming listening experience.",
+              "recommendation": "Add controls such as drag-and-drop functionality for reordering, 'remove' buttons, or 'play next' options to individual tracks in the queue to provide users with more granular control over their playlist.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The music tracks presented in the 'Now Playing' section and 'Up Next In Queue' are not explicitly labeled as recommendations. While the onboarding mentions 'Get Recommendations', the active listening interface only states 'Matched for [task]' or implies they are part of a generated playlist.",
+              "recommendation": "Clearly label the 'Now Playing' track and the 'Up Next In Queue' section as 'Recommended Track' and 'Recommended Queue' or similar, to reinforce that the music is personalized based on user input.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider provides a numerical rating for the currently playing track, but its meaning and how it influences recommendations are not clearly communicated, making it difficult for users to provide precise feedback.",
+              "recommendation": "Replace the ambiguous 'QI' slider with a more intuitive rating system or provide clear instructions on its meaning and impact on recommendations.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421075257.json"
+    },
+    {
+      "run_id": "20260421075611",
+      "created_at": "2026-04-21T07:56:11.492382Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 2,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The numbered boxes in the 'Your Personal Music Engine' section (0:17) visually resemble interactive steps or buttons, but they are not clickable, creating a false affordance.",
+              "recommendation": "Differentiate the visual design of these informational boxes from interactive elements, or make them clickable to navigate to relevant sections if they are intended to be interactive.",
+              "severity": 2
+            },
+            {
+              "description": "The circular arrow icon next to the skip button in the music player (1:00, 1:18) does not clearly communicate its function of recalibrating the playlist, which is a key interaction.",
+              "recommendation": "Use a more descriptive icon or add a text label (e.g., 'Recalibrate') to clearly indicate the purpose of this button.",
+              "severity": 3
+            },
+            {
+              "description": "The small blue dot on the progress bar (1:03), used for rating the track's effectiveness, is not clearly recognizable as an interactive control for providing feedback.",
+              "recommendation": "Redesign the rating mechanism to be more distinct from the progress bar, perhaps using a dedicated icon or a more standard rating input.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "The 'Avg Track Duration' in the 'Session History' and individual track durations in the 'Session Timeline' display negative values (e.g., '-1m -17s'), which is incorrect and unhelpful for understanding session performance.",
+              "recommendation": "Correct the calculation and display of track durations to ensure only non-negative values are shown.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The energy level slider uses inconsistent labels across different screens. On the 'Define Your Session' screen, it uses 'Afternoon Slump', 'Steady State', and 'Morning Peak', while on the 'Update Your Preferences' modal, it uses 'Low', 'Medium', and 'High' for what appears to be the same control.",
+              "recommendation": "Standardize the labels for the energy level slider to be consistent across all instances in the interface to avoid user confusion.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When the user selects \"Too Busy\" for recalibration, the interface provides a textual toast notification (\"Complexity Reduced. Switching to more minimalist tracks.\") but lacks clear visual indicators in the \"Now Playing\" or \"Audio Profile\" sections to demonstrate how the music's \"busyness\" or \"complexity\" has been adjusted.",
+              "recommendation": "Introduce a visual element or a more specific textual descriptor within the \"Now Playing\" or \"Audio Profile\" display that dynamically reflects changes in music complexity or busyness, similar to how BPM changes are shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The music player interface lacks a clear 'next track' or 'skip' button, which limits the user's direct control over the playback sequence. While recalibration offers a way to influence the playlist, it does not provide immediate control to skip an individual track.",
+              "recommendation": "Add a 'next track' button to the music player controls, similar to the existing 'previous track' button, to allow users to easily advance to the next song in the queue.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The music tracks presented in the 'Now Playing' section and 'Up Next In Queue' are not explicitly labeled as recommendations. While the onboarding mentions 'Get Recommendations', the active listening interface only states 'Matched for [task]' or implies they are part of a generated playlist.",
+              "recommendation": "Clearly label the 'Now Playing' track and the 'Up Next In Queue' section as 'Recommended Track' and 'Recommended Queue' or similar, to reinforce that the music is personalized based on user input.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "The system provides a consistent explanation for the currently playing track based on the initial session definition (task, energy, music preference). However, it does not offer distinguishable explanations for other potential types of recommendations (e.g., collaborative filtering, popularity-based) or for the tracks listed in the 'Up Next In Queue' section.",
+              "recommendation": "Introduce diverse explanations for recommendations, especially for tracks in the queue, to help users understand the different factors influencing the playlist. For example, add labels like 'Because you liked X' or 'Popular in this genre' to queued tracks or when a new recommendation strategy is applied.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider provides a numerical rating for the currently playing track, but its meaning and how it influences recommendations are not clearly communicated, making it difficult for users to provide precise feedback.",
+              "recommendation": "Replace the ambiguous 'QI' slider with a more intuitive rating system or provide clear instructions on its meaning and impact on recommendations.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421075611.json"
+    },
+    {
+      "run_id": "20260421075840",
+      "created_at": "2026-04-21T07:58:40.700272Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 3,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The icon used for the 'Recalibrate' button (a circular arrow) is ambiguous and does not clearly convey its function of adjusting the playlist based on the user's focus state.",
+              "recommendation": "Replace the current icon with one that more intuitively represents 'recalibrate,' 'adjust,' or 'feedback,' and consider adding a tooltip for clarity on hover.",
+              "severity": 2
+            },
+            {
+              "description": "On the 'Session History' page, the icon next to 'Flow Matches' resembles a filter or settings icon, suggesting interactivity, but it does not respond to clicks.",
+              "recommendation": "Either make the icon interactive to provide filtering or additional information, or replace it with a purely decorative icon that does not imply user interaction.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "The 'Avg Track Duration' in the 'Session History' and individual track durations in the 'Session Timeline' display negative values (e.g., '-1m -17s'), which is incorrect and unhelpful for understanding session performance.",
+              "recommendation": "Correct the calculation and display logic to ensure all track durations are non-negative and accurately reflect session performance.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The energy level slider uses inconsistent labels across different screens. On the 'Define Your Session' screen, it uses 'Afternoon Slump', 'Steady State', and 'Morning Peak', while on the 'Update Your Preferences' modal, it uses 'Low', 'Medium', and 'High' for what appears to be the same control.",
+              "recommendation": "Standardize the labels for the energy level slider to be consistent across all instances in the interface to avoid user confusion.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider, which the user interacts with, lacks clear labels or context to explain what preference is being expressed. The percentage value is abstract, making it difficult for the user to understand the meaning or impact of their input.",
+              "recommendation": "Provide clear descriptive labels for the 'QI' slider's purpose and its range (e.g., 'Focus Level: Distracting <-> Immersive') or replace it with a more universally understood preference input like a thumbs up/down or a star rating.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When the user selects \"Too Busy\" for recalibration, the interface provides a textual toast notification (\"Complexity Reduced. Switching to more minimalist tracks.\") but lacks clear visual indicators in the \"Now Playing\" or \"Audio Profile\" sections to demonstrate how the music's \"busyness\" or \"complexity\" has been adjusted.",
+              "recommendation": "Introduce a visual element or a more specific textual descriptor within the \"Now Playing\" or \"Audio Profile\" display that dynamically reflects changes in music complexity or busyness, similar to how BPM changes are shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The music player interface lacks a clear 'next track' or 'skip' button, which limits the user's direct control over the playback sequence. While recalibration offers a way to influence the playlist, it does not provide immediate control to skip an individual track.",
+              "recommendation": "Add a 'next track' button to the music player controls, similar to the existing 'previous track' button, to allow users to easily advance to the next song in the queue.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The music tracks presented in the 'Now Playing' section and 'Up Next In Queue' are not explicitly labeled as recommendations. While the onboarding mentions 'Get Recommendations', the active listening interface only states 'Matched for [task]' or implies they are part of a generated playlist.",
+              "recommendation": "Clearly label the 'Now Playing' track and the 'Up Next In Queue' section as 'Recommended Track' and 'Recommended Queue' or similar, to reinforce that the music is personalized based on user input.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider provides a numerical rating for the currently playing track, but its meaning and how it influences recommendations are not clearly communicated, making it difficult for users to provide precise feedback.",
+              "recommendation": "Replace the ambiguous 'QI' slider with clear, descriptive rating options (e.g., 'Like', 'Dislike', 'Neutral') or provide explicit instructions on how the 'QI' score impacts recommendations.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421075840.json"
+    },
+    {
+      "run_id": "20260421080137",
+      "created_at": "2026-04-21T08:01:37.189718Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 4,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The numbered boxes in the 'Your Personal Music Engine' section (0:17) visually resemble interactive steps or buttons, but they are not clickable, creating a false affordance.",
+              "recommendation": "Differentiate the visual design of these informational boxes from interactive elements, or make them clickable to navigate to relevant sections if they are intended to be interactive.",
+              "severity": 2
+            },
+            {
+              "description": "The circular arrow icon next to the skip button in the music player (1:00, 1:18) does not clearly communicate its function of recalibrating the playlist, which is a key interaction.",
+              "recommendation": "Use a more descriptive icon or add a text label (e.g., 'Recalibrate') to clearly indicate the purpose of this button.",
+              "severity": 3
+            },
+            {
+              "description": "The small blue dot on the progress bar (1:03), used for rating the track's effectiveness, is not clearly recognizable as an interactive control for providing feedback.",
+              "recommendation": "Redesign the rating mechanism to be more distinct from the progress bar, perhaps using a dedicated icon or a more standard rating input.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "The \"Avg Track Duration\" in the session history displays a negative value, which is confusing and does not clearly communicate what the metric represents.",
+              "recommendation": "Clarify the meaning of \"Avg Track Duration\" by either rephrasing the label to be more descriptive or providing a tooltip explanation.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider, which the user interacts with, lacks clear labels or context to explain what preference is being expressed. The percentage value is abstract, making it difficult for the user to understand the meaning or impact of their input.",
+              "recommendation": "Provide clear descriptive labels for the 'QI' slider's purpose and its range (e.g., 'Focus Level: Distracting <-> Immersive') or replace it with a more universally understood preference input like a thumbs up/down or a star rating.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When the user selects \"Too Busy\" for recalibration, the interface provides a textual toast notification (\"Complexity Reduced. Switching to more minimalist tracks.\") but lacks clear visual indicators in the \"Now Playing\" or \"Audio Profile\" sections to demonstrate how the music's \"busyness\" or \"complexity\" has been adjusted.",
+              "recommendation": "Introduce a visual element or a more specific textual descriptor within the \"Now Playing\" or \"Audio Profile\" display that dynamically reflects changes in music complexity or busyness, similar to how BPM changes are shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The music player interface lacks a clear 'next track' or 'skip' button, which limits the user's direct control over the playback sequence. While recalibration offers a way to influence the playlist, it does not provide immediate control to skip an individual track.",
+              "recommendation": "Add a 'next track' button to the music player controls, similar to the existing 'previous track' button, to allow users to easily advance to the next song in the queue.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The music tracks presented to the user, which are generated based on their preferences and recalibrations, are not explicitly labeled as \"recommendations.\" The system uses terms like \"matched for\" or \"playlist\" but avoids the direct term.",
+              "recommendation": "Clearly label the generated tracks or playlists as \"recommendations\" or \"your recommended playlist\" to explicitly communicate the system's function as a recommender. For example, the \"Up Next In Queue\" section could be titled \"Recommended Tracks.\"",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The 'QI' slider provides a numerical rating for the currently playing track, but its meaning and how it influences recommendations are not clearly communicated, making it difficult for users to provide precise feedback.",
+              "recommendation": "Replace the ambiguous 'QI' slider with clear, descriptive rating options (e.g., 'Like', 'Dislike', 'Neutral') or provide explicit instructions on how the 'QI' score impacts recommendations.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421080137.json"
+    },
+    {
+      "run_id": "20260421080439",
+      "created_at": "2026-04-21T08:04:39.091158Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 5,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The icon used for the 'Recalibrate' button (a circular arrow) is ambiguous and does not clearly convey its function of adjusting the playlist based on the user's focus state.",
+              "recommendation": "Replace the current icon with one that more intuitively represents 'recalibrate,' 'adjust,' or 'feedback,' and consider adding a tooltip for clarity on hover.",
+              "severity": 2
+            },
+            {
+              "description": "On the 'Session History' page, the icon next to 'Flow Matches' resembles a filter or settings icon, suggesting interactivity, but it does not respond to clicks.",
+              "recommendation": "Either make the icon interactive to provide filtering or additional information, or replace it with a purely decorative icon that does not imply user interaction.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "The \"Avg Track Duration\" in the session history displays a negative value, which is confusing and does not clearly communicate what the metric represents.",
+              "recommendation": "Clarify the meaning of \"Avg Track Duration\" by either rephrasing the label to be more descriptive or providing a tooltip explanation.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The energy level slider uses inconsistent labels across different screens. On the 'Define Your Session' screen, it uses 'Afternoon Slump', 'Steady State', and 'Morning Peak', while on the 'Update Your Preferences' modal, it uses 'Low', 'Medium', and 'High' for what appears to be the same control.",
+              "recommendation": "Standardize the labels for the energy level slider to be consistent across all instances in the interface to avoid user confusion.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When the user selects \"Too Busy\" for recalibration, the interface provides a textual toast notification (\"Complexity Reduced. Switching to more minimalist tracks.\") but lacks clear visual indicators in the \"Now Playing\" or \"Audio Profile\" sections to demonstrate how the music's \"busyness\" or \"complexity\" has been adjusted.",
+              "recommendation": "Introduce a visual element or a more specific textual descriptor within the \"Now Playing\" or \"Audio Profile\" display that dynamically reflects changes in music complexity or busyness, similar to how BPM changes are shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The interface lacks a clear and direct mechanism for users to provide feedback (e.g., like/dislike) on individual tracks during playback. The 'flow match' slider appears to be a display of the system's assessment rather than an interactive user input.",
+              "recommendation": "Implement explicit 'like' or 'dislike' buttons for tracks, or clearly indicate how the 'flow match' slider can be used by the user to provide feedback, to allow users to directly influence future recommendations.",
+              "severity": 2
+            },
+            {
+              "description": "Users have limited control over the 'Up Next In Queue' list, with no visible options to reorder, remove, or skip to specific tracks within the queue. This restricts flexibility in managing the upcoming listening experience.",
+              "recommendation": "Add controls such as drag-and-drop functionality for reordering, 'remove' buttons, or 'play next' options to individual tracks in the queue to provide users with more granular control over their playlist.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The music tracks presented in the 'Now Playing' section and 'Up Next In Queue' are not explicitly labeled as recommendations. While the onboarding mentions 'Get Recommendations', the active listening interface only states 'Matched for [task]' or implies they are part of a generated playlist.",
+              "recommendation": "Clearly label the 'Now Playing' track and the 'Up Next In Queue' section as 'Recommended Track' and 'Recommended Queue' or similar, to reinforce that the music is personalized based on user input.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "The system provides a consistent explanation for the currently playing track based on the initial session definition (task, energy, music preference). However, it does not offer distinguishable explanations for other potential types of recommendations (e.g., collaborative filtering, popularity-based) or for the tracks listed in the 'Up Next In Queue' section.",
+              "recommendation": "Introduce diverse explanations for recommendations, especially for tracks in the queue, to help users understand the different factors influencing the playlist. For example, add labels like 'Because you liked X' or 'Popular in this genre' to queued tracks or when a new recommendation strategy is applied.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The interface lacks explicit track-level feedback mechanisms, such as 'Like' or 'Dislike' buttons, preventing users from providing granular input on individual recommendations. While recalibration is available, it's a session-level adjustment rather than specific track feedback.",
+              "recommendation": "Implement clear and accessible 'Like' or 'Dislike' buttons directly on individual track recommendations to enable granular user feedback.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421080439.json"
+    }
+  ]
+}

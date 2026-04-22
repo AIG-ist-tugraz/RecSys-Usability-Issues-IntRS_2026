@@ -1,0 +1,57 @@
+[
+    {
+        "id": "G1",
+        "scenario": "general",
+        "criterion": "Is the layout clear and visually structured?"
+    },
+    {
+        "id": "G2",
+        "scenario": "general",
+        "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?"
+    },
+    {
+        "id": "G3",
+        "scenario": "general",
+        "criterion": "Is the amount of information per item appropriate and helpful?"
+    },
+    {
+        "id": "G4",
+        "scenario": "general",
+        "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?"
+    },
+    {
+        "id": "P1",
+        "scenario": "preference_elicitation",
+        "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?"
+    },
+    {
+        "id": "P2",
+        "scenario": "preference_elicitation",
+        "criterion": "Is there transparency about how input affects recommendations?"
+    },
+    {
+        "id": "P3",
+        "scenario": "preference_elicitation",
+        "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?"
+    },
+    {
+        "id": "R1",
+        "scenario": "recommendation_presentation",
+        "criterion": "Are recommendations clearly labeled as such?"
+    },
+    {
+        "id": "R2",
+        "scenario": "recommendation_presentation",
+        "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?"
+    },
+    {
+        "id": "R3",
+        "scenario": "recommendation_presentation",
+        "criterion": "Are there explanations for why items are recommended?"
+    },
+    {
+        "id": "R4",
+        "scenario": "recommendation_presentation",
+        "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?"
+    }
+]

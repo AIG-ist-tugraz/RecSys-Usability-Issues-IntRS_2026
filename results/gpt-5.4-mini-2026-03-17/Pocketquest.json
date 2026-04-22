@@ -1,0 +1,1222 @@
+{
+  "model_output_name": "gpt-5.4-mini-2026-03-17",
+  "video_file": "Pocketquest.mp4",
+  "providers": [
+    "openai"
+  ],
+  "model_names": [
+    "gpt-5.4-mini-2026-03-17"
+  ],
+  "merged_at": "2026-04-21T11:56:22.555712+00:00",
+  "run_count": 5,
+  "total_criteria_results": 55,
+  "successful_criteria_results": 55,
+  "failed_criteria_results": 0,
+  "runs": [
+    {
+      "run_id": "20260421094316",
+      "created_at": "2026-04-21T09:43:16.579417Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 1,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "Several sections use a dense, card-heavy layout with limited spacing, making the page feel crowded and harder to scan as more recommendations appear.",
+              "recommendation": "Increase vertical spacing between sections and add clearer grouping headers or dividers so each content block is visually separated.",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation cards and controls rely on similar dark surfaces and thin outlines, so the hierarchy between primary content, secondary options, and actions is not always immediately clear.",
+              "recommendation": "Strengthen visual hierarchy by using more distinct elevation, contrast, or section backgrounds for primary cards versus secondary options and controls.",
+              "severity": 2
+            },
+            {
+              "description": "Some text and labels sit on a dark, textured background with relatively low contrast, which reduces readability and makes the structure harder to parse at a glance.",
+              "recommendation": "Increase text contrast and simplify the background behind text-heavy areas to improve legibility and visual structure.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several interactive controls rely on subtle icon-only cues or low-contrast styling, such as the small gear icon and the top logo button, making them easy to overlook as clickable elements.",
+              "recommendation": "Increase affordance with clearer button styling, hover states, and/or text labels or tooltips for icon-only controls.",
+              "severity": 2
+            },
+            {
+              "description": "Some selectable cards and options are visually similar to static content, especially the recommendation cards and preference tiles, so it is not immediately obvious that they are interactive.",
+              "recommendation": "Use stronger interactive cues such as consistent button/card chrome, hover elevation, pointer cursor, and clearer selected/pressed states across all clickable cards.",
+              "severity": 2
+            },
+            {
+              "description": "The disabled-looking 'Find My Adventures' button at the end appears muted and less button-like before selection is complete, which may make its interactive purpose unclear.",
+              "recommendation": "Keep the primary action visually distinct even when disabled by using a clearer disabled state with explanatory text, or hide it until it becomes actionable.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Recommendation cards show a large image plus multiple metadata fields, tags, a rationale box, and several action buttons, making each item visually dense and harder to scan quickly.",
+              "recommendation": "Reduce each card to the most decision-critical details first (title, short summary, and 2–3 key attributes), and move secondary details like tags or rationale into an expandable area or detail view.",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation list includes many alternative cards below the main suggestion, each with similar amounts of information, which creates a crowded comparison view.",
+              "recommendation": "Limit the number of visible alternatives at once and progressively disclose additional options through horizontal paging or a 'show more' control.",
+              "severity": 2
+            },
+            {
+              "description": "Some cards use long descriptive text in the 'Why now?' section and item summaries, which can dominate the card and compete with the main recommendation.",
+              "recommendation": "Shorten explanatory text to one concise sentence and reserve longer explanations for a tooltip or expanded details panel.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected-state styling is inconsistent across recommendation cards and preference tiles: some use a bright green fill, others only a green outline, and some selected states also change text color differently. This makes it harder to quickly recognize what is selected versus merely hovered or emphasized.",
+              "recommendation": "Use one consistent selected-state pattern across all cards and tiles (same fill, border, and text treatment), and reserve hover for a distinct, lighter treatment.",
+              "severity": 2
+            },
+            {
+              "description": "Primary action buttons change appearance and labeling across steps and screens, with orange and green buttons used for similar actions and labels such as \"Find My Next Adventure\" and \"Find My Adventures.\" This weakens visual consistency for the main call to action.",
+              "recommendation": "Standardize the primary CTA color, icon treatment, and label pattern across the flow, and use secondary/destructive styles only for clearly different actions.",
+              "severity": 2
+            },
+            {
+              "description": "Iconography is not fully consistent: similar concepts are represented by different icon styles and some controls use emoji-like icons while others use line icons. The mixed visual language makes related elements feel like they belong to different systems.",
+              "recommendation": "Adopt a single icon style set and apply it consistently to all controls, cards, and status badges.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface supports preference input through sliders and category tiles, but the available preference controls are only revealed after several onboarding steps, so users cannot express preferences immediately on entry.",
+              "recommendation": "Expose the main preference controls earlier on the landing screen or provide a clear, direct path to the preference form from the start.",
+              "severity": 2
+            },
+            {
+              "description": "Preference selection appears to rely on tapping cards and sliders, but there is no visible text field or explicit rating scale for users who want to state preferences in a more precise way.",
+              "recommendation": "Add an explicit preference input option such as ratings, searchable categories, or a free-text preference field alongside the existing controls.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after each input, but it does not explain how the selected values influence the ranking until much later in the flow. Early screens only give vague statements like \"context is everything,\" so users cannot tell what their answers are doing.",
+              "recommendation": "Add brief, inline explanations near each input showing how that choice affects results, and summarize the active factors before the recommendations page (for example, \"Your mood increases social/energetic options\").",
+              "severity": 3
+            },
+            {
+              "description": "When the user adjusts sliders and category choices, the interface updates recommendation cards and match percentages, but there is no immediate explanation of why a specific item moved up or down. The relationship between the input and the resulting recommendation order is only partially visible through changing labels.",
+              "recommendation": "Provide a visible \"Why this changed\" or \"Why this match\" explanation on each recommendation card that cites the exact inputs used, such as time, budget, mood, and selected categories.",
+              "severity": 2
+            },
+            {
+              "description": "The feedback after dismissing a recommendation is limited to generic reasons like \"Too far\" or \"Too expensive,\" which explains rejection but not how those inputs affect future recommendations. Users are not shown how dismissing items will alter subsequent suggestions.",
+              "recommendation": "After a dismissal, show a short confirmation that states how the feedback will be used, such as \"We'll show fewer options beyond your distance limit,\" and reflect that change in the next set of results.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The onboarding flow requires users to step through multiple preference screens before results appear, but there is no visible option to skip the setup and browse recommendations immediately.",
+              "recommendation": "Add a clearly labeled Skip or Browse first option on the opening screen so users can bypass onboarding and return to it later if needed.",
+              "severity": 3
+            },
+            {
+              "description": "The preference flow shows Back navigation only after several steps, so users cannot visibly undo or revise earlier inputs until they have progressed further into the questionnaire.",
+              "recommendation": "Provide persistent Back and Edit controls from the start of the flow, or allow users to jump directly to any completed step to revise answers.",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation results page shows a settings icon for refining preferences, but the available controls for dismissing or rejecting a recommendation are not immediately visible until after interacting with a card and opening a modal.",
+              "recommendation": "Expose primary controls such as Not Today, Dismiss, and refine options directly on each recommendation card so users can quickly reject or adjust suggestions without extra steps.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled with generic badges like \"Food,\" \"Culture,\" and \"Nature,\" but these labels do not explicitly indicate that the items are recommendations. The main recommendation area relies on visual prominence rather than a clear recommendation label.",
+              "recommendation": "Add an explicit heading or badge such as \"Recommended for you\" above the results list and keep it visible on each recommendation card or section.",
+              "severity": 3
+            },
+            {
+              "description": "The alternative suggestions section is labeled \"More Options\" and \"Swipe to explore alternatives,\" but it does not clearly state that these are also recommendations. Users may not immediately recognize these as algorithmic suggestions rather than unrelated content.",
+              "recommendation": "Label the section as recommendations too, for example \"More recommended adventures\" or \"Other recommendations,\" and keep the recommendation context consistent across all result sections.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by labels like \"The Wildcard,\" \"The Safe Bet,\" and \"The Local Secret,\" but these labels are not consistently visible across the browsing flow and can be obscured by hover states or card cropping. This makes it harder to quickly tell recommendation types apart at a glance.",
+              "recommendation": "Keep recommendation-type labels permanently visible and place them in a consistent, high-contrast location on every card, independent of hover or scroll position.",
+              "severity": 2
+            },
+            {
+              "description": "The interface uses multiple visual cues for recommendation types (e.g., labels, badges, and card styling), but the meaning of these cues is not explained anywhere visible. Users may not understand how \"Local Secret\" differs from \"Wildcard\" or \"Safe Bet.\"",
+              "recommendation": "Add a short legend or tooltip that explains each recommendation type and what it means, and keep the wording consistent across all recommendation cards.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items show match percentages and short labels like \"Why now?\" on some cards, but the interface does not clearly explain the specific factors behind each recommendation in a consistent, visible way.",
+              "recommendation": "Add a clear, always-visible explanation on each recommendation card that states the main reasons it was selected, such as time, budget, mood, distance, or category matches.",
+              "severity": 3
+            },
+            {
+              "description": "The recommendation rationale is only shown after opening individual items or dialogs, so users must inspect items one by one to understand why they were suggested.",
+              "recommendation": "Surface a concise explanation directly in the list view for every recommendation, and provide a \"Why this?\" affordance that expands to more detail without leaving the page.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards expose only a few interaction controls directly on the card, and the available actions are not consistently visible across the recommendation list. Users can clearly choose an item, but save/rate/hide-style controls are only surfaced in some states or after opening additional UI.",
+              "recommendation": "Provide a consistent, always-visible action set on every recommendation card (e.g., Save, Not Interested/Hide, and Like/Dislike) so users can act on any recommendation without hunting for hidden controls.",
+              "severity": 3
+            },
+            {
+              "description": "The hide/dislike flow is buried behind a modal opened from a secondary action, adding extra steps before users can dismiss an unwanted recommendation. This makes negative feedback slower than selecting a recommendation.",
+              "recommendation": "Add a one-tap hide/dismiss control directly on each recommendation card, and keep the reason prompt optional after the dismissal so users can act quickly.",
+              "severity": 2
+            },
+            {
+              "description": "The interface shows a feedback action labeled \"I Did This!\" on recommendation cards, but there is no equally clear save/bookmark control visible in the recording. Users may not have an obvious way to save recommendations for later.",
+              "recommendation": "Add a dedicated save/bookmark action on each recommendation card and label it clearly, with a visible saved state after activation.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421094316.json"
+    },
+    {
+      "run_id": "20260421094726",
+      "created_at": "2026-04-21T09:47:26.681782Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 2,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "Several sections use a dense, card-heavy layout with limited spacing, making the page feel crowded and harder to scan quickly. The repeated recommendation cards and controls compete for attention instead of forming a clear visual hierarchy.",
+              "recommendation": "Increase vertical spacing between sections and group related controls more clearly. Use stronger section dividers and reduce the number of simultaneously prominent elements on screen.",
+              "severity": 2
+            },
+            {
+              "description": "Some text and controls are low-contrast against the dark background, especially secondary labels and smaller metadata. This weakens the visual structure because important information blends into the page.",
+              "recommendation": "Raise contrast for secondary text and metadata, and use clearer typographic weight differences between headings, labels, and supporting copy. Ensure all card text meets accessible contrast ratios.",
+              "severity": 2
+            },
+            {
+              "description": "The interface mixes multiple visual styles across cards, buttons, and overlays, which makes the overall structure feel inconsistent. In particular, the recommendation cards, preference modal, and action buttons do not share a fully unified spacing and alignment system.",
+              "recommendation": "Standardize card padding, border treatment, and button sizing across the experience. Apply a consistent grid and alignment rules so each section reads as part of the same layout system.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only or icon-dominant affordances (e.g., the top circular logo button and the small gear icon) that are not self-explanatory from the recording alone.",
+              "recommendation": "Add visible text labels or tooltips for icon-only controls, and use more standard button styling to make their clickability obvious.",
+              "severity": 2
+            },
+            {
+              "description": "Some interactive cards and options look like content tiles rather than clickable controls, especially the recommendation cards and category tiles that only show subtle border/hover changes.",
+              "recommendation": "Increase affordance with clearer button-like styling, stronger hover/focus states, and explicit selection indicators so users can immediately recognize them as interactive.",
+              "severity": 2
+            },
+            {
+              "description": "The slider control is visually prominent, but its draggable handle and track are not clearly distinguished as an interactive element until the cursor is already over it.",
+              "recommendation": "Make the thumb larger and more handle-like, add a stronger contrast between filled and unfilled track, and consider a short label such as \"Drag to adjust\".",
+              "severity": 2
+            },
+            {
+              "description": "The secondary actions near the recommendation card, such as \"Not Today\" and \"I Did This!\", are visually subdued and can be mistaken for inactive text rather than clickable buttons.",
+              "recommendation": "Use higher-contrast button styling and clearer hover/pressed states for secondary actions so they read as interactive at a glance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Recommendation cards show a large image plus multiple metadata fields, tags, a \"Why now?\" explanation, match percentage, and several action buttons, making each item visually dense and harder to scan quickly.",
+              "recommendation": "Reduce each card to the most decision-critical details by default (title, one-line summary, and 2–3 key attributes), and move secondary details like tags or explanations behind an expand/collapse control.",
+              "severity": 2
+            },
+            {
+              "description": "The \"More Options\" area displays several additional recommendation cards at once, each with the same dense structure, which increases information overload and makes comparison difficult.",
+              "recommendation": "Limit the number of visible alternatives per view or use a simpler compact layout for secondary options, with progressive disclosure for full details on demand.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The recommendation cards use different visual treatments for the same status states: some cards show a bright green filled highlight while others use only a thin green outline, and the selected state changes across screens. This makes it harder to tell which elements are interactive or currently selected.",
+              "recommendation": "Use one consistent selected/hover/active style for all recommendation cards and apply it uniformly across the interface.",
+              "severity": 2
+            },
+            {
+              "description": "Primary action buttons change appearance and labeling across steps, with the main CTA shifting between orange and green and using different text such as \"Find My Next Adventure,\" \"Find My Adventures,\" and \"Choose This Adventure.\" This weakens the visual consistency of the main action.",
+              "recommendation": "Standardize the primary CTA color, icon treatment, and label pattern across all steps, and reserve alternate colors only for clearly different action types.",
+              "severity": 2
+            },
+            {
+              "description": "The settings/preferences control appears as a gear icon in some views and as a different icon/button treatment in others, while the same function is presented with varying visual emphasis. This inconsistency makes the control less immediately recognizable.",
+              "recommendation": "Keep the settings/preferences entry point in one fixed location with the same icon, size, and styling throughout the flow.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface supports preference expression through multiple explicit controls, including sliders, category tiles, and feedback actions like \"Not Today\" and \"I Did This!\". No clear usability issue related to expressing preferences is observable in the recording.",
+              "recommendation": "No fix needed based on the recording.",
+              "severity": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after each input, but it does not clearly explain which specific inputs affected the current result or how much each one mattered. Users can see the recommendation update, yet the cause-and-effect between their selections and the ranked results remains mostly implicit.",
+              "recommendation": "Add a concise explanation panel or inline labels that map each recommendation to the inputs that influenced it (for example, time, mood, budget, and category) and show how those inputs changed the match score.",
+              "severity": 3
+            },
+            {
+              "description": "When the user adjusts preferences, the screen updates the recommendation list without clearly highlighting what changed in the ranking or why a new item moved up. This makes it hard to understand the impact of a single input change on the final suggestions.",
+              "recommendation": "After each preference change, briefly surface a 'changed because...' message or visually annotate the updated cards with the matching factors and score changes.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The onboarding flow requires users to step through multiple screens before reaching recommendations, but there is no visible option to skip the questionnaire or jump ahead. This limits control for users who want to browse results immediately.",
+              "recommendation": "Add a clearly visible Skip/See recommendations now action on the intro and questionnaire screens, and allow users to proceed with default or partial inputs.",
+              "severity": 3
+            },
+            {
+              "description": "The questionnaire appears to require completing each step sequentially, with no visible way to edit earlier answers until later screens. Users cannot easily revise inputs without navigating back through the flow.",
+              "recommendation": "Provide persistent Back/Edit controls on every step and a review screen where users can change any prior answer before generating results.",
+              "severity": 2
+            },
+            {
+              "description": "On the results screen, the only visible feedback actions are Not Today and I Did This!, but there is no obvious undo or change-selection control after interacting with a recommendation. This makes it hard to correct accidental feedback.",
+              "recommendation": "Add an Undo or Change feedback option after each action, and keep a visible history of recent feedback so users can reverse it quickly.",
+              "severity": 3
+            },
+            {
+              "description": "The recommendation cards support dismissing an item via Not Today, but there is no visible way to restore a dismissed recommendation from the main results view. Users may lose items they dismissed by mistake.",
+              "recommendation": "Include a restore/undo control for dismissed cards, or provide a Dismissed items section where users can bring recommendations back.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Recommendation labels are inconsistent: some screens use generic labels like \"Your Quest Awaits\" and \"More Options\" without explicitly indicating that the items are recommendations, while the recommendation cards themselves rely on badges such as \"Match\" and \"Local Secret\" rather than a clear recommendation label.",
+              "recommendation": "Add a persistent, explicit label such as \"Recommended for you\" or \"Recommendations\" above the results list and on each recommendation card so users can immediately distinguish recommendations from other content.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled with generic badges like \"The Wildcard,\" \"The Safe Bet,\" and \"The Local Secret,\" but the meaning of these recommendation types is not explained on-screen. Users may not understand how these differ from each other or from the main recommendation.",
+              "recommendation": "Add short, explicit labels or tooltips that explain each recommendation type (for example, \"Wildcard = more novel option,\" \"Safe Bet = closest match,\" \"Local Secret = hidden gem\").",
+              "severity": 2
+            },
+            {
+              "description": "The main recommendation and the alternative cards use different visual treatments, but the interface does not consistently explain why one item is the primary match versus an alternative. This makes it harder to distinguish recommendation categories at a glance.",
+              "recommendation": "Use a consistent legend or section labels such as \"Best Match,\" \"Alternative Picks,\" and \"Different Option\" so users can immediately tell why each recommendation is being shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items include a \"Why now?\" explanation, but the rationale is brief and generic, so it does not clearly show why a specific item was chosen over alternatives. The explanation appears only after opening an item, making it easy to miss during browsing.",
+              "recommendation": "Show a short, item-specific reason directly on each recommendation card in the main list, such as matching time, budget, mood, or category, and keep the explanation visible without requiring extra interaction.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards expose only two explicit feedback actions in the main result view: \"Not Today\" and \"I Did This!\". There is no visible way to rate, save, or hide a recommendation directly from the card itself, so interaction options are limited and somewhat indirect.",
+              "recommendation": "Add clearly labeled, always-visible actions on each recommendation card for the main feedback types you support, such as Save, Hide/Not interested, and Rate, so users can act without opening a separate dialog.",
+              "severity": 3
+            },
+            {
+              "description": "The \"Not Today\" action opens a modal that requires an extra step before the recommendation is dismissed, which makes hiding a recommendation slower than necessary.",
+              "recommendation": "Provide a one-click hide/dismiss action on the card, and keep the modal only for optional reason selection after the item has already been removed from the list.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421094726.json"
+    },
+    {
+      "run_id": "20260421095116",
+      "created_at": "2026-04-21T09:51:16.575496Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 3,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "Several sections are visually dense, with many similarly styled cards, chips, and buttons competing for attention in the same viewport. This makes the page feel busy and reduces the clarity of the overall structure.",
+              "recommendation": "Increase whitespace between sections and reduce the number of simultaneously prominent elements; use stronger section grouping and hierarchy so the primary action and current step stand out more clearly.",
+              "severity": 2
+            },
+            {
+              "description": "In the recommendation results, the main card and the 'More Options' carousel use similar card styling and visual weight, so the primary recommendation is not immediately distinguished from alternatives. The layout becomes harder to scan as more cards appear below.",
+              "recommendation": "Differentiate the primary recommendation with a clearer container, stronger heading treatment, and more separation from the secondary options; visually de-emphasize the carousel cards.",
+              "severity": 2
+            },
+            {
+              "description": "The preference modal overlays the page with multiple controls arranged in a tight grid, and the background content remains visible behind it. The modal content is structured, but the dense arrangement makes it harder to quickly understand the available choices.",
+              "recommendation": "Simplify the modal by increasing spacing, using clearer grouping for the preference categories, and dimming the background more strongly to focus attention on the dialog.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only or low-emphasis icon treatments, such as the small circular logo/button at the top and the gear icon in the results view, making their interactivity less obvious at a glance.",
+              "recommendation": "Add visible labels or stronger button styling (e.g., outlined button shape, tooltip on hover, clearer hover/focus states) so users can immediately recognize these as clickable controls.",
+              "severity": 2
+            },
+            {
+              "description": "In the recommendation cards and modal, some selectable options are presented as plain text blocks with subtle borders and minimal contrast, so they can read more like static content than interactive choices until hovered.",
+              "recommendation": "Increase affordance for selectable cards by using stronger button-like styling, clearer hover states, and consistent selected-state indicators across all options.",
+              "severity": 2
+            },
+            {
+              "description": "The bottom actions in the modal and results screen use muted, low-contrast button styling for secondary actions, which makes them easy to overlook compared with the primary orange button.",
+              "recommendation": "Differentiate primary and secondary actions more clearly with stronger contrast, spacing, and button hierarchy so all interactive elements are immediately recognizable.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Recommendation cards often show a large image, a title, a short description, a \"Why now?\" explanation, distance, duration, price, tags, and multiple action buttons. The amount of information per item is high and can make it hard to quickly compare options.",
+              "recommendation": "Reduce each card to the most decision-critical details by default (title, one-line reason, and 2–3 key metadata fields), and move secondary details into an expandable section or detail view.",
+              "severity": 3
+            },
+            {
+              "description": "The cards use several labels and badges at once, including match percentage, category, \"Local Secret\"/\"Wildcard\" style badges, and multiple tags. This creates visual clutter and makes it harder to identify the most important information at a glance.",
+              "recommendation": "Prioritize one primary relevance signal per card and limit the number of badges/tags shown inline; surface the rest only on hover, expand, or in the detail panel.",
+              "severity": 2
+            },
+            {
+              "description": "Some recommendation cards include long descriptive text plus a separate \"Why now?\" explanation, which repeats the rationale in two places. This duplicates information and increases item length without adding much clarity.",
+              "recommendation": "Combine the rationale into a single concise explanation per item, or replace the repeated text with a shorter summary and a \"more details\" affordance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The recommendation cards use different visual treatments for the same status elements: some cards show a bright green match badge while others use different badge colors and label styles, making the meaning of the badges inconsistent across the interface.",
+              "recommendation": "Standardize the match/status badge color, shape, and placement across all recommendation cards, and use one consistent label format for the same type of information.",
+              "severity": 2
+            },
+            {
+              "description": "Selected states are shown with varying emphasis across screens and components, including different border colors, fills, and text colors for similar selected options and buttons. This makes it harder to recognize which visual cue indicates selection versus hover or emphasis.",
+              "recommendation": "Define one selection style system and apply it consistently to all selectable elements, using the same border, fill, and text treatment for selected states and a separate, distinct style for hover states.",
+              "severity": 2
+            },
+            {
+              "description": "The interface mixes icon styles and visual language across sections, including emoji-like icons, line icons, and different badge/icon treatments for similar concepts. This inconsistency makes related controls and categories feel like they belong to different design systems.",
+              "recommendation": "Use a single icon style set and apply it consistently to all categories, chips, and action buttons, with the same stroke weight, color treatment, and sizing rules.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface initially offers only a single primary action and no visible way to express likes, ratings, or category preferences before starting the guided flow.",
+              "recommendation": "Add an always-visible preference entry point on the landing screen, such as quick like/dislike buttons, star ratings, or category chips, so users can state preferences without starting the full questionnaire.",
+              "severity": 2
+            },
+            {
+              "description": "Preference controls are buried inside a multi-step onboarding flow, so users must progress through several screens before they can explicitly indicate what they like or dislike.",
+              "recommendation": "Surface preference controls earlier and allow skipping directly to preference selection or editing from the main results screen.",
+              "severity": 2
+            },
+            {
+              "description": "The preference-setting modal uses small category tiles with subtle state changes, which makes it harder to notice that these are explicit preference controls.",
+              "recommendation": "Increase the visual prominence of the preference controls and add clearer labels or icons for like/dislike states so users can recognize and use them more easily.",
+              "severity": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after each input, but it does not explain which specific inputs influenced the current match beyond a brief generic \"Why now?\" note on each card. Users can see the result change, yet the connection between their selections and the recommendation ranking remains opaque.",
+              "recommendation": "Add a clear explanation panel or inline summary that maps each recommendation to the inputs that affected it, such as mood, time, budget, and category preferences, with a short reason for each match score.",
+              "severity": 3
+            },
+            {
+              "description": "When preferences are adjusted, the screen updates the recommendation list and match percentages, but there is no visible confirmation of how much each change altered the results or which items were boosted or removed. This makes it hard to understand the impact of a single input change.",
+              "recommendation": "Show immediate feedback after each input change, such as a brief \"updated because...\" message, highlighted changed factors, or a before/after comparison of affected recommendations.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The onboarding flow requires users to step through multiple preference screens before results appear, but there is no visible option to skip the questionnaire and browse recommendations immediately.",
+              "recommendation": "Add a clearly labeled Skip/See results now action on the intro and each step so users can bypass setup when they want faster access.",
+              "severity": 3
+            },
+            {
+              "description": "The main recommendation card offers only positive actions and a dismiss option; there is no visible way to undo a choice or revisit a previously dismissed recommendation from the results view.",
+              "recommendation": "Provide an Undo or Restore last dismissed item control, and keep a visible history of skipped recommendations so users can recover them later.",
+              "severity": 3
+            },
+            {
+              "description": "Several preference inputs appear to be single-choice or step-based selections, but the interface does not show an explicit edit/reset control for changing earlier answers once the flow advances.",
+              "recommendation": "Add persistent Back/Edit controls for each step and a summary screen where users can review and modify all inputs before applying them.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Recommendation labels are inconsistent: the main suggestion is framed as a quest/adventure rather than explicitly as a recommendation, and the lower cards are labeled as alternatives without a clear recommendation heading.",
+              "recommendation": "Add a persistent label such as \"Recommended for you\" or \"Suggested for you\" above the primary card and the alternatives section so users immediately recognize these as recommendations.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by labels like \"The Wildcard,\" \"The Safe Bet,\" and \"The Local Secret,\" but these labels are not consistently visible or explained, so the type of recommendation is easy to miss when scanning the list.",
+              "recommendation": "Keep recommendation-type labels consistently visible on every card and add a short legend or tooltip explaining what each label means.",
+              "severity": 2
+            },
+            {
+              "description": "The main recommendation card uses a small \"Why now?\" section to explain why it was chosen, but this rationale is visually subtle compared with the rest of the card and can be overlooked.",
+              "recommendation": "Increase the prominence of the rationale with a clearer badge or header such as \"Because you liked...\" and stronger visual separation from the rest of the card content.",
+              "severity": 2
+            },
+            {
+              "description": "Alternative recommendations in the \"More Options\" area are shown as similar image cards with only small badges and percentages, making it hard to distinguish whether they are different recommendation types or just more of the same.",
+              "recommendation": "Use distinct visual treatments and explicit type labels for each alternative recommendation category, such as \"Wildcard,\" \"Safe Bet,\" and \"Local Secret,\" so users can compare them at a glance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items show a match percentage and a short \"Why now?\" note, but the interface does not explain how the recommendation was generated beyond broad labels like mood, time, and budget. Users cannot tell which specific factors drove a given item's ranking.",
+              "recommendation": "Add a concise explanation on each recommendation card that lists the key matched factors and their contribution, such as \"Matched your 60-minute window, low-key mood, and nearby location.\"",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation list includes alternative items and match scores, but there is no visible explanation for why one item is ranked above another. This makes the ordering feel opaque when several options appear similarly relevant.",
+              "recommendation": "Provide a short ranking rationale near the list header or on each card, such as \"Ranked higher because it best matches your time, budget, and preferred category.\"",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards only expose two explicit feedback actions: \"Not Today\" and \"I Did This!\". No visible controls for rating, saving, or hiding individual recommendations are shown on the main cards.",
+              "recommendation": "Add clearly labeled, persistent actions on each recommendation card for save/bookmark, rate, and hide/dismiss, and make them available without opening a modal.",
+              "severity": 3
+            },
+            {
+              "description": "The only visible way to reject a recommendation is the \"Not Today\" flow, which opens a modal with reasons and then requires an extra confirmation step. This adds friction to quickly hiding an unwanted recommendation.",
+              "recommendation": "Provide a one-click hide/dismiss action directly on the card, and keep the reason prompt optional or secondary after dismissal.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421095116.json"
+    },
+    {
+      "run_id": "20260421095525",
+      "created_at": "2026-04-21T09:55:25.009320Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 4,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "Several sections are visually crowded, with dense cards, small labels, and multiple controls competing for attention in the same area. This makes the page feel busy rather than clearly structured, especially in the recommendation results and preference panels.",
+              "recommendation": "Increase whitespace between sections and simplify each card by reducing the number of visible elements at once. Group related metadata into clearer rows and consider progressive disclosure for secondary details.",
+              "severity": 3
+            },
+            {
+              "description": "The layout relies heavily on similar dark panels with subtle borders, so section boundaries are not always immediately obvious. In the results area, cards and controls blend together, making it harder to scan the hierarchy quickly.",
+              "recommendation": "Strengthen visual hierarchy with more distinct section headers, stronger spacing, and clearer container contrast. Use consistent card elevation or background variation to separate primary content from supporting controls.",
+              "severity": 2
+            },
+            {
+              "description": "Some controls and content blocks appear partially cut off at the bottom of the viewport during scrolling, which interrupts the visual structure. This makes the page feel unfinished and reduces clarity about where one section ends and the next begins.",
+              "recommendation": "Ensure each section has enough bottom padding so cards and headings are fully visible before the next section begins. Adjust scroll spacing or container heights to avoid clipped content at common viewport sizes.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only or icon-dominant affordances (e.g., the top circular logo/button and the small gear icon) without clear labels, making their interactivity easy to miss.",
+              "recommendation": "Add visible text labels or tooltips for icon-only controls, and use standard button styling to distinguish them from decorative icons.",
+              "severity": 2
+            },
+            {
+              "description": "Some interactive cards and options look like static content because their clickable state is subtle and only becomes obvious on hover/selection.",
+              "recommendation": "Increase the contrast of interactive states with stronger borders, shadows, or hover cues, and make all selectable cards look consistently clickable from the start.",
+              "severity": 2
+            },
+            {
+              "description": "The small action icons inside recommendation cards and the compact controls near the top-right are visually understated compared with surrounding content, so they are not immediately recognizable as actionable.",
+              "recommendation": "Enlarge these controls slightly and give them a clearer button treatment, such as a filled background or hover highlight, to separate them from non-interactive elements.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Several recommendation cards show dense detail blocks with image, label, match score, title, description, rationale, distance, duration, price, tags, and multiple actions, which makes each item visually heavy and harder to scan.",
+              "recommendation": "Reduce each card to the most decision-critical fields by default (e.g., title, match score, one-line reason, distance/time/price) and move secondary details into an expandable view.",
+              "severity": 2
+            },
+            {
+              "description": "The main recommendation card and the alternative cards repeat similar information at different levels of detail, creating redundancy rather than clearer item summaries.",
+              "recommendation": "Differentiate the primary card from alternatives by showing only a concise summary on the alternatives and reserving fuller details for the selected item or a detail panel.",
+              "severity": 2
+            },
+            {
+              "description": "Some item descriptions are long and text-heavy relative to the card size, causing the content to feel crowded and reducing readability.",
+              "recommendation": "Shorten descriptions to one concise sentence or truncate them with an explicit 'more' affordance so the card stays compact and readable.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected-state styling is inconsistent across recommendation cards and preference tiles: some use a bright green fill, others only a green outline, and some show additional labels like \"Preferred\" while others do not.",
+              "recommendation": "Use one consistent selected-state pattern for all selectable items, with the same fill, border, and optional status text rules applied everywhere.",
+              "severity": 2
+            },
+            {
+              "description": "Primary action buttons change appearance and meaning across steps, with orange \"Next\"/\"Find My Adventures\" buttons in earlier screens and a green \"Apply Preferences\" button in the preferences modal.",
+              "recommendation": "Standardize primary action button color, shape, and icon treatment across the flow, and reserve color changes for semantic states only.",
+              "severity": 2
+            },
+            {
+              "description": "The same iconography appears with different visual treatments in different places, such as the compass-like icon shown in the logo, button, and cards with varying sizes, outlines, and fills.",
+              "recommendation": "Define a single icon style guide and reuse the same size, stroke weight, and color treatment for each icon role throughout the interface.",
+              "severity": 1
+            },
+            {
+              "description": "Category labels and badges are not consistently presented: some cards show a top-left category chip, others rely on the card title or a different badge style, making similar content look different.",
+              "recommendation": "Apply a consistent metadata layout for all cards, using the same placement and style for category chips, match badges, and secondary labels.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface supports explicit preference expression through multiple controls, including category selection, a mood slider, budget choices, and feedback actions like \"Not Today\" and \"I Did This!\". No clear usability issue related to expressing preferences is observable in the recording.",
+              "recommendation": "No fix needed based on the recording.",
+              "severity": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after each input, but it does not explain how the selected values influence the ranking until much later in the flow. Users can see match percentages and labels, yet the connection between their inputs and those scores is not made explicit at the point of input.",
+              "recommendation": "Add immediate, inline feedback after each selection that states which recommendation factors changed and how they affected the results, such as a short summary or updated explanation panel.",
+              "severity": 3
+            },
+            {
+              "description": "Several input controls use vague labels like mood, vibe, and budget without clarifying how each choice maps to recommendation outcomes. The screen shows the controls changing, but not what specific recommendation attributes are being adjusted.",
+              "recommendation": "Provide brief helper text or tooltips next to each control explaining what it changes in the recommendation model and how it will affect the suggestions shown.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The initial landing screen offers only a single primary action to start the recommendation flow, with no visible way to skip the onboarding or explore recommendations without answering the prompts.",
+              "recommendation": "Add a clearly visible skip/continue-browsing option on the landing screen so users can bypass the guided flow if they want to browse directly.",
+              "severity": 3
+            },
+            {
+              "description": "During the multi-step questionnaire, the interface shows Back and Next controls, but there is no visible undo or reset for individual answers once selected.",
+              "recommendation": "Provide an explicit undo/reset control for each step or a summary screen where users can edit previous answers before generating results.",
+              "severity": 2
+            },
+            {
+              "description": "In the results view, the main recommendation card is prominent, but the only visible rejection action is a small 'Not Today' button that opens a modal; there is no obvious direct way to dismiss or skip a recommendation from the card itself.",
+              "recommendation": "Expose a clear dismiss/skip action directly on each recommendation card and keep the modal optional for adding a reason.",
+              "severity": 2
+            },
+            {
+              "description": "The 'Refine Your Preferences' dialog uses tap-to-like, twice-to-dislike, three times-to-reset behavior, but this interaction is not self-evident from the controls and offers no visible immediate undo for a mistaken tap.",
+              "recommendation": "Replace the multi-tap gesture with explicit like/dislike/reset buttons or add persistent undo feedback after each tap.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled with generic badges like \"The Wildcard,\" \"The Safe Bet,\" and \"The Local Secret,\" but these labels do not clearly indicate that the items are recommendations. The recommendation status is only implied by surrounding context and match percentages.",
+              "recommendation": "Add an explicit label such as \"Recommended for you\" or \"Suggested adventures\" above the results list and on each card where appropriate.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by labels like \"Local Secret,\" \"Why now?,\" and category tags, but these cues are small and easy to miss compared with the large images and titles. As a result, the reason or type of each recommendation is not immediately distinguishable at a glance.",
+              "recommendation": "Make recommendation type and rationale more prominent by placing a clear, consistent badge near the title (e.g., \"Because you liked...\", \"Local Secret\", \"Trending\") and using stronger visual hierarchy or color coding for each recommendation type.",
+              "severity": 2
+            },
+            {
+              "description": "In the results view, multiple recommendation cards use similar layouts and styling, so the distinction between alternative recommendation types such as \"The Wildcard,\" \"The Safe Bet,\" and \"The Local Secret\" relies mainly on small text labels. This makes it hard to quickly tell why one item differs from another.",
+              "recommendation": "Add a short explanatory subtitle or icon system that explicitly states the recommendation type and why it was surfaced, and keep those cues in a fixed position across all cards.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items show a match percentage and brief labels like \"Why now?\", but the interface does not clearly explain the specific factors behind each recommendation until much later in the flow.",
+              "recommendation": "Show a concise reason on every recommendation card, such as the top matching signals (time, mood, budget, distance), and keep the explanation visible near the item title or match badge.",
+              "severity": 3
+            },
+            {
+              "description": "The recommendation rationale is inconsistent across screens: some cards include a \"Why now?\" explanation while others only show a match score and category tags, making it hard to understand why a particular item was surfaced.",
+              "recommendation": "Standardize recommendation explanations across all items by using the same reason format and placement for every card, even if the reason is short.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards expose only two direct actions: \"Not Today\" to dismiss and \"I Did This!\" to confirm completion. No visible control for saving/bookmarking or rating a recommendation is shown in the recording.",
+              "recommendation": "Add explicit save/bookmark and rating controls on each recommendation card, and make them visible without opening a separate settings panel.",
+              "severity": 2
+            },
+            {
+              "description": "The visible interaction options are limited to dismissing or confirming a recommendation; there is no obvious way to provide finer-grained feedback such as thumbs up/down or star ratings on the current card.",
+              "recommendation": "Provide lightweight rating actions directly on the recommendation card so users can express preference without fully accepting or rejecting the item.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421095525.json"
+    },
+    {
+      "run_id": "20260421095901",
+      "created_at": "2026-04-21T09:59:01.376271Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 5,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The page uses a very tall, scroll-heavy single-column layout with large empty spaces between sections, so the overall structure feels stretched rather than clearly organized.",
+              "recommendation": "Reduce vertical spacing and group related content into tighter sections or cards so users can scan the page structure more easily.",
+              "severity": 2
+            },
+            {
+              "description": "Several sections repeat the same card-based pattern with similar colors and borders, making it hard to distinguish where one content block ends and the next begins.",
+              "recommendation": "Increase visual separation between sections using stronger headings, dividers, or background contrast to clarify the page hierarchy.",
+              "severity": 2
+            },
+            {
+              "description": "In the recommendation flow, the main content and secondary options are stacked far apart, and the lower options only become visible after scrolling, which weakens the sense of a clear layout.",
+              "recommendation": "Keep primary actions and key alternatives closer together on screen, or add a clearer section header and spacing system to show how the content is grouped.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on subtle icon-only or low-emphasis treatments, such as the small gear icon and the top logo button, which are not immediately recognizable as interactive elements.",
+              "recommendation": "Use clearer button styling for icon-only controls, including stronger contrast, hover states, and optional text labels or tooltips.",
+              "severity": 2
+            },
+            {
+              "description": "Some interactive cards and options are visually similar to static content blocks, making it hard to tell at a glance which areas can be clicked or selected.",
+              "recommendation": "Add stronger affordances for clickable cards, such as clearer borders, hover elevation, pointer cues, and consistent selected-state styling.",
+              "severity": 2
+            },
+            {
+              "description": "The slider handle and some choice tiles are only clearly interactive after hover or drag, so their interactivity is not obvious in the default state.",
+              "recommendation": "Increase the default affordance of sliders and selectable tiles with more prominent handles, selection indicators, and brief helper text where needed.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Recommendation cards show a lot of detail at once, including image, category, match score, title, description, rationale, distance, duration, price, tags, and multiple actions. This makes each item visually dense and harder to scan quickly.",
+              "recommendation": "Reduce the default card content to the most decision-critical fields, and move secondary details into an expandable area or detail view.",
+              "severity": 2
+            },
+            {
+              "description": "The expanded recommendation view repeats several item details and adds extra explanatory text, which increases item length substantially. The amount of information per item becomes heavy enough that users must scroll to compare alternatives.",
+              "recommendation": "Condense the expanded card by prioritizing one short rationale line and a few key metadata fields, while hiding less important details behind progressive disclosure.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The interface uses different visual treatments for the same recommendation cards across sections: some cards show dark backgrounds, others light/white placeholders, and selected states vary between green fills and orange accents. This inconsistency makes it harder to recognize what is interactive and what state each item is in.",
+              "recommendation": "Standardize card styling and state colors across all recommendation sections, using one consistent pattern for default, hover, selected, and unavailable states.",
+              "severity": 2
+            },
+            {
+              "description": "Action buttons and controls use multiple color meanings without a stable pattern: orange is used for primary actions in some steps, green is used for confirmation/selection in others, and disabled-looking buttons sometimes appear with similar shapes but different emphasis. The changing color semantics can confuse users about which action is primary or currently active.",
+              "recommendation": "Assign fixed color roles to actions and keep them consistent throughout the flow, such as one color for primary actions, one for selected states, and one for secondary/disabled actions.",
+              "severity": 2
+            },
+            {
+              "description": "Icon usage is inconsistent across similar controls and cards, with different icon styles and placements appearing for comparable concepts (e.g., labels, badges, and buttons). This reduces visual coherence and makes related elements feel like they belong to different systems.",
+              "recommendation": "Use a single icon set and consistent placement rules for similar UI elements, and avoid mixing icon styles within the same workflow.",
+              "severity": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface only exposes preference input through a short onboarding flow and a settings modal; there is no visible persistent control for users to explicitly adjust likes/dislikes or categories from the main recommendation view until they discover the settings icon.",
+              "recommendation": "Add always-visible preference controls on the recommendation screen, such as like/dislike buttons and editable category chips, so users can refine preferences without hunting for settings.",
+              "severity": 2
+            },
+            {
+              "description": "The category preference modal uses a tap-to-like / double-tap-to-dislike / triple-tap-to-reset interaction, which is not self-evident from the screen and may be hard to discover or use accurately.",
+              "recommendation": "Replace or supplement the gesture-based category control with explicit buttons or toggles labeled Like, Dislike, and Reset, and keep the gesture hints as secondary help text.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after each input, but it does not clearly explain which specific inputs affected the current recommendation list or how much each input mattered. Users can see the results update, yet the relationship between their selections and the ranked matches remains implicit.",
+              "recommendation": "Add a concise explanation panel or inline labels that map each recommendation to the inputs that influenced it most (for example, time, budget, mood, and category), and update it as selections change.",
+              "severity": 3
+            },
+            {
+              "description": "When the user adjusts preferences, the screen updates recommendation cards and match percentages, but there is no visible feedback describing why the top result changed or why certain alternatives moved up or down. This makes the system feel reactive without being understandable.",
+              "recommendation": "Show a short 'Why this changed' message after each input change, summarizing the key preference(s) that drove the ranking update and highlighting the affected cards.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The initial recommendation flow offers no visible way to skip or bypass the onboarding questions; users must proceed through the full sequence before seeing results.",
+              "recommendation": "Add a clearly labeled skip option on the first screen so users can jump directly to recommendations or a browse mode.",
+              "severity": 3
+            },
+            {
+              "description": "The preference questions appear to require step-by-step progression, but there is no visible undo or reset control for earlier answers once the user advances.",
+              "recommendation": "Provide persistent back/edit controls and a clear reset preferences action so users can revise prior inputs without restarting the flow.",
+              "severity": 3
+            },
+            {
+              "description": "After recommendations appear, the interface shows actions like \"Not Today\" and \"I Did This!\", but there is no obvious way to undo a dismissed or confirmed item once acted on.",
+              "recommendation": "Add an undo snackbar or a reversible state control after dismiss/confirm actions so users can quickly restore an item.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Recommendation cards are labeled with generic badges like \"Local Secret,\" \"The Wildcard,\" and \"The Safe Bet,\" but these labels do not explicitly say that the items are recommendations.",
+              "recommendation": "Add a clear recommendation label near the list or on each card, such as \"Recommended for you\" or \"Suggested adventure,\" and keep the existing badges as secondary descriptors.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by labels like \"Local Secret,\" \"Why now?,\" and category tags, but these cues are small and easy to miss compared with the large images and titles. As a result, different recommendation types are not immediately distinguishable at a glance.",
+              "recommendation": "Make recommendation type labels more prominent and consistent, such as using a dedicated badge area with stronger contrast and a short explanation line near the title on every card.",
+              "severity": 2
+            },
+            {
+              "description": "In the results view, multiple cards use similar visual styling and only subtle text labels to indicate why an item is recommended (e.g., \"The Wildcard,\" \"The Safe Bet,\" \"The Local Secret\"). The distinction between recommendation types is therefore not clear without reading each card closely.",
+              "recommendation": "Add a clear, standardized recommendation-type marker on each card, using distinct icons/colors and a legend or tooltip that explains each type.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended items include a \"Why now?\" explanation, but the rationale is only shown after opening each card and is not visible in the main recommendation list. This makes it harder to quickly understand why a specific item was suggested.",
+              "recommendation": "Surface a short explanation directly on each recommendation card in the list view, such as the top matching factors or a one-line reason, with an optional expand/collapse for more detail.",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation explanations are generic and repetitive, often phrased as broad context matches rather than item-specific reasons. This limits their usefulness for distinguishing between similar recommendations.",
+              "recommendation": "Make explanations item-specific by referencing the exact signals used for each suggestion, such as time window, budget, mood, distance, or category match.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards expose only two explicit feedback actions in the main result view: \"Not Today\" and \"I Did This!\". No visible control for saving/bookmarking or rating a recommendation is shown in the recording.",
+              "recommendation": "Add clearly labeled save/bookmark and rating controls directly on each recommendation card, or provide an obvious action menu with these options.",
+              "severity": 2
+            },
+            {
+              "description": "The feedback actions are visually secondary to the primary \"Choose This Adventure\" button, and the \"Not Today\" action is especially low-emphasis. This makes it easy to miss that recommendations can be dismissed or positively/negatively marked.",
+              "recommendation": "Increase the visibility and affordance of feedback controls by using stronger labels/icons, consistent button styling, and placing them in a more prominent, predictable location on each card.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421095901.json"
+    }
+  ]
+}

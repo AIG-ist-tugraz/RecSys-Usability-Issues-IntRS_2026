@@ -1,0 +1,629 @@
+{
+  "model_output_name": "gemini-2.5-flash",
+  "video_file": "Ecobite.mp4",
+  "providers": [
+    "gemini"
+  ],
+  "model_names": [
+    "gemini-2.5-flash"
+  ],
+  "merged_at": "2026-04-21T11:56:22.549399+00:00",
+  "run_count": 5,
+  "total_criteria_results": 55,
+  "successful_criteria_results": 55,
+  "failed_criteria_results": 0,
+  "runs": [
+    {
+      "run_id": "20260421080729",
+      "created_at": "2026-04-21T08:07:29.802513Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Ecobite.mp4",
+      "run_index": 1,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The product browsing interface lacks direct mechanisms for users to explicitly express preferences (e.g., likes, dislikes, or ratings) for individual products they encounter but do not add to their cart. This limits the system's ability to learn from browsing behavior beyond what is added to the cart or swapped.",
+              "recommendation": "Implement 'like' or 'dislike' buttons, or a simple rating system on product cards within the browsing interface. This would allow users to provide more granular feedback on products they are interested in or not interested in, even if they don't purchase them.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The initial preference settings (sliders for carbon footprint, budget, animal welfare, and dietary constraints) are not explicitly linked to the product display on the main shopping page. Users must infer how their preferences are applied based on product labels, rather than seeing a direct explanation of how their choices impact the displayed results.",
+              "recommendation": "Clearly display how user preferences influence product listings and filtering on the main shopping page, perhaps through a dedicated section or dynamic labels.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "On the main shopping and recipe discovery pages, individual product and recipe listings are not explicitly labeled as recommendations. While the section titles indicate personalization, the lack of specific 'recommended' labels on each item might lead users to perceive them as generic listings rather than tailored suggestions.",
+              "recommendation": "Add a clear, concise label (e.g., 'Recommended for you' or a small, consistent icon) to each product and recipe card to explicitly highlight that these items are personalized recommendations based on the user's preferences.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "The main product listing on the \"Shop Sustainable Groceries\" page does not explicitly state the specific reasons for recommending individual products based on the user's previously configured ethical profile (carbon footprint, budget, animal welfare). Users must infer the connection between their preferences and the displayed items.",
+              "recommendation": "Add concise, dynamic labels or tooltips to each product card on the shopping page that clearly articulate why that specific product is recommended, referencing the user's set preferences (e.g., \"Recommended: Low Carbon Impact,\" \"Recommended: Budget-Friendly\").",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "The main product listing on the 'Shop Sustainable Groceries' page does not provide explicit explanations for why specific items are recommended to the user based on their previously set ethical profile. Users see product attributes like 'Local' or 'Organic', but not how these align with their personalized preferences, reducing transparency of the recommendation logic.",
+              "recommendation": "Integrate concise, personalized explanations directly on product cards or as a prominent filter/sort option on the main shopping page, indicating how each item aligns with the user's ethical priorities (e.g., 'Recommended for your high carbon footprint priority').",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421080729.json"
+    },
+    {
+      "run_id": "20260421081013",
+      "created_at": "2026-04-21T08:10:13.395009Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Ecobite.mp4",
+      "run_index": 2,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The product browsing interface lacks direct mechanisms for users to explicitly express preferences (e.g., likes, dislikes, or ratings) for individual products they encounter but do not add to their cart. This limits the system's ability to learn from browsing behavior beyond what is added to the cart or swapped.",
+              "recommendation": "Implement 'like' or 'dislike' buttons, or a simple rating system on product cards within the browsing interface. This would allow users to provide more granular feedback on products they are interested in or not interested in, even if they don't purchase them.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The initial preference settings (sliders for carbon footprint, budget, animal welfare, and dietary constraints) are not explicitly linked to the product display on the main shopping page. Users must infer how their preferences are applied based on product labels, rather than seeing a direct explanation of their impact.",
+              "recommendation": "Clearly display how user preferences are applied to product filtering and ranking on the main shopping page, perhaps with a dedicated section or clear indicators.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "On the main shopping and recipe discovery pages, individual product and recipe listings are not explicitly labeled as recommendations. While the section titles indicate personalization, the lack of specific 'recommended' labels on each item might lead users to perceive them as generic listings rather than tailored suggestions.",
+              "recommendation": "Add a clear, concise label (e.g., 'Recommended for you' or a small, consistent icon) to each product and recipe card to explicitly highlight that these items are personalized recommendations based on the user's preferences.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "After setting up a detailed ethical profile, the main grocery shopping page (1:03-2:29) displays products without explicit indicators or rationales explaining how they align with the user's personalized preferences (e.g., carbon footprint, budget, animal welfare). While product attributes like \"Local\" or \"Organic\" are present, the direct link to the user's profile-based recommendations is missing, making it hard to distinguish why certain items are shown or prioritized for them.",
+              "recommendation": "Implement clear, concise recommendation labels or badges on product cards on the main shopping page that directly reference the user's ethical profile settings (e.g., \"Matches your High Carbon Footprint Priority,\" \"Budget-Friendly Choice,\" \"Certified Animal Welfare\"). This would make the personalization more transparent and actionable.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "The primary product listings on the \"Shop Sustainable Groceries\" page and the recipe recommendations on the \"Discover Recipes\" page do not provide explicit explanations for why these items are recommended to the user based on their previously configured ethical profile. While some product attributes (e.g., \"Local\", \"Organic\") and recipe labels (e.g., \"Pantry Sync\") are present, they do not clearly articulate the personalized recommendation logic.",
+              "recommendation": "Integrate concise, personalized explanations directly into the product and recipe cards, highlighting how each item aligns with the user's specific preferences (e.g., \"Recommended for your high carbon footprint priority,\" \"Matches your budget sensitivity,\" or \"Vegan-friendly recipe\").",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421081013.json"
+    },
+    {
+      "run_id": "20260421081248",
+      "created_at": "2026-04-21T08:12:48.137114Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Ecobite.mp4",
+      "run_index": 3,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When users adjust preference sliders or toggle dietary constraints, there is no immediate feedback on how these selections will directly influence the product recommendations or the shopping experience. Users must complete the setup process to observe the effects.",
+              "recommendation": "Implement dynamic feedback during preference setting, such as a small preview of how recommendations change or a summary of applied filters.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "On the main shopping and recipe discovery pages, individual product and recipe listings are not explicitly labeled as recommendations. While the section titles indicate personalization, the lack of specific 'recommended' labels on each item might lead users to perceive them as generic listings rather than tailored suggestions.",
+              "recommendation": "Add a clear, concise label (e.g., 'Recommended for you' or a small, consistent icon) to each product and recipe card to explicitly highlight that these items are personalized recommendations based on the user's preferences.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "After setting up a detailed ethical profile, the main grocery shopping page (1:03-2:29) displays products without explicit indicators or rationales explaining how they align with the user's personalized preferences (e.g., carbon footprint, budget, animal welfare). While product attributes like \"Local\" or \"Organic\" are present, the direct link to the user's profile-based recommendations is missing, making it hard to distinguish why certain items are shown or prioritized for them.",
+              "recommendation": "Implement clear, concise recommendation labels or badges on product cards on the main shopping page that directly reference the user's ethical profile settings (e.g., \"Matches your High Carbon Footprint Priority,\" \"Budget-Friendly Choice,\" \"Certified Animal Welfare\"). This would make the personalization more transparent and actionable.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "The main product listing on the 'Shop Sustainable Groceries' page does not provide explicit explanations for why specific items are recommended to the user based on their previously set ethical profile. Users see product attributes like 'Local' or 'Organic', but not how these align with their personalized preferences, reducing transparency of the recommendation logic.",
+              "recommendation": "Integrate concise, personalized explanations directly on product cards or as a prominent filter/sort option on the main shopping page, indicating how each item aligns with the user's ethical priorities (e.g., 'Recommended for your high carbon footprint priority').",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421081248.json"
+    },
+    {
+      "run_id": "20260421081548",
+      "created_at": "2026-04-21T08:15:48.544878Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Ecobite.mp4",
+      "run_index": 4,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "When users adjust preference sliders or toggle dietary constraints, there is no immediate feedback on how these selections will directly influence the product recommendations or the shopping experience. Users must complete the setup process to observe the effects.",
+              "recommendation": "Implement dynamic feedback during preference setting, such as a small preview of how recommendations change or a summary of applied filters.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "The main product listing on the \"Shop Sustainable Groceries\" page does not explicitly state the specific reasons for recommending individual products based on the user's previously configured ethical profile (carbon footprint, budget, animal welfare). Users must infer the connection between their preferences and the displayed items.",
+              "recommendation": "Add concise, dynamic labels or tooltips to each product card on the shopping page that clearly articulate why that specific product is recommended, referencing the user's set preferences (e.g., \"Recommended: Low Carbon Impact,\" \"Recommended: Budget-Friendly\").",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "The primary product listings on the \"Shop Sustainable Groceries\" page and the recipe recommendations on the \"Discover Recipes\" page do not provide explicit explanations for why these items are recommended to the user based on their previously configured ethical profile. While some product attributes (e.g., \"Local\", \"Organic\") and recipe labels (e.g., \"Pantry Sync\") are present, they do not clearly articulate the personalized recommendation logic.",
+              "recommendation": "Integrate concise, personalized explanations directly into the product and recipe cards, highlighting how each item aligns with the user's specific preferences (e.g., \"Recommended for your high carbon footprint priority,\" \"Matches your budget sensitivity,\" or \"Vegan-friendly recipe\").",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421081548.json"
+    },
+    {
+      "run_id": "20260421081823",
+      "created_at": "2026-04-21T08:18:23.073373Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Ecobite.mp4",
+      "run_index": 5,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The product browsing interface lacks direct mechanisms for users to explicitly express preferences (e.g., likes, dislikes, or ratings) for individual products they encounter but do not add to their cart. This limits the system's ability to learn from browsing behavior beyond what is added to the cart or swapped.",
+              "recommendation": "Implement 'like' or 'dislike' buttons, or a simple rating system on product cards within the browsing interface. This would allow users to provide more granular feedback on products they are interested in or not interested in, even if they don't purchase them.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The initial preference settings (sliders for carbon footprint, budget, animal welfare, and dietary constraints) are not explicitly linked to the product display on the main shopping page. Users must infer how their preferences are applied based on product labels, rather than seeing a direct explanation of how their choices impact the displayed results.",
+              "recommendation": "Clearly display how user preferences influence product listings and filtering on the main shopping page, perhaps through a dedicated section or dynamic labels.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "After setting up a detailed ethical profile, the main grocery shopping page (1:03-2:29) displays products without explicit indicators or rationales explaining how they align with the user's personalized preferences (e.g., carbon footprint, budget, animal welfare). While product attributes like \"Local\" or \"Organic\" are present, the direct link to the user's profile-based recommendations is missing, making it hard to distinguish why certain items are shown or prioritized for them.",
+              "recommendation": "Implement clear, concise recommendation labels or badges on product cards on the main shopping page that directly reference the user's ethical profile settings (e.g., \"Matches your High Carbon Footprint Priority,\" \"Budget-Friendly Choice,\" \"Certified Animal Welfare\"). This would make the personalization more transparent and actionable.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "The primary product listings on the \"Shop Sustainable Groceries\" page and the recipe recommendations on the \"Discover Recipes\" page do not provide explicit explanations for why these items are recommended to the user based on their previously configured ethical profile. While some product attributes (e.g., \"Local\", \"Organic\") and recipe labels (e.g., \"Pantry Sync\") are present, they do not clearly articulate the personalized recommendation logic.",
+              "recommendation": "Integrate concise, personalized explanations directly into the product and recipe cards, highlighting how each item aligns with the user's specific preferences (e.g., \"Recommended for your high carbon footprint priority,\" \"Matches your budget sensitivity,\" or \"Vegan-friendly recipe\").",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "On the 'Discover Recipes' page, users can view recipes and add ingredients to their cart, but there are no explicit options to rate, hide, or save recipes for future reference or to influence future recipe recommendations.",
+              "recommendation": "Implement 'Like/Dislike' buttons or a 'Save Recipe' feature for recipe recommendations to allow users to provide feedback and manage their preferred recipes.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421081823.json"
+    }
+  ]
+}

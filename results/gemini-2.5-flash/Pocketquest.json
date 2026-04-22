@@ -1,0 +1,589 @@
+{
+  "model_output_name": "gemini-2.5-flash",
+  "video_file": "Pocketquest.mp4",
+  "providers": [
+    "gemini"
+  ],
+  "model_names": [
+    "gemini-2.5-flash"
+  ],
+  "merged_at": "2026-04-21T11:56:22.549750+00:00",
+  "run_count": 5,
+  "total_criteria_results": 55,
+  "successful_criteria_results": 55,
+  "failed_criteria_results": 0,
+  "runs": [
+    {
+      "run_id": "20260421082112",
+      "created_at": "2026-04-21T08:21:12.451193Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 1,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The 'Vibe Tags' on the detailed adventure view (e.g., at 2:27) change color on hover, suggesting interactivity, but their function is not immediately clear from their appearance alone. They look like descriptive labels rather than actionable elements.",
+              "recommendation": "Add a clear visual cue or a tooltip to the 'Vibe Tags' to indicate their interactivity and purpose (e.g., 'Click to filter' or 'Click to add to preferences'). If they are purely descriptive, remove the hover effect that implies interaction.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The color used for primary action buttons is inconsistent across the interface. Main navigation buttons (e.g., \"Find My Next Adventure\", \"Next\", \"Choose This Adventure\") are orange, while primary action buttons within modals (e.g., \"Dismiss Quest\", \"Apply Preferences\") are green.",
+              "recommendation": "Standardize the color for all primary action buttons throughout the application to a single, consistent color (e.g., orange) to clearly indicate the main action to the user.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The interface lacks an explicit 'save for later' or 'bookmark' feature for individual recommendations, which could lead to users losing track of interesting options they are not ready to commit to immediately.",
+              "recommendation": "Add a 'Save' or 'Bookmark' button to each recommendation card, allowing users to easily store items they find appealing for future consideration.",
+              "severity": 2
+            },
+            {
+              "description": "There is no direct mechanism for users to rate individual recommendations (e.g., thumbs up/down, star rating), limiting their ability to provide granular feedback on specific items to improve future personalization.",
+              "recommendation": "Implement a simple rating system on each recommendation card, such as a 'Like' or 'Dislike' button, to allow users to give direct feedback on the relevance or quality of individual suggestions.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421082112.json"
+    },
+    {
+      "run_id": "20260421082349",
+      "created_at": "2026-04-21T08:23:49.530859Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 2,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The 'Vibe Tags' displayed on the recommendation cards and the detailed adventure view (e.g., 'pastries', 'morning', 'quick') do not visually indicate interactivity, making it unclear if they can be clicked or used for filtering.",
+              "recommendation": "Implement a clear hover state (e.g., cursor change, background highlight) for the 'Vibe Tags' to communicate their interactive nature, if they are intended to be clickable for filtering or further exploration. If they are purely descriptive, consider a different visual style to avoid implying interactivity.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The color used for primary action buttons is inconsistent across the interface. Main navigation buttons (e.g., \"Find My Next Adventure\", \"Next\", \"Choose This Adventure\") are orange, while primary action buttons within modals (e.g., \"Dismiss Quest\", \"Apply Preferences\") are green.",
+              "recommendation": "Standardize the color for all primary action buttons throughout the application to a single, consistent color (e.g., orange) to clearly indicate the main action to the user.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421082349.json"
+    },
+    {
+      "run_id": "20260421082554",
+      "created_at": "2026-04-21T08:25:54.405379Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 3,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The 'Vibe Tags' on the detailed adventure view (e.g., at 2:27) change color on hover, suggesting interactivity, but their function is not immediately clear from their appearance alone. They look like descriptive labels rather than actionable elements.",
+              "recommendation": "Add a clear visual cue or a tooltip to the 'Vibe Tags' to indicate their interactivity and purpose (e.g., 'Click to filter' or 'Click to add to preferences'). If they are purely descriptive, remove the hover effect that implies interaction.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The color used for primary action buttons is inconsistent across the interface. Main navigation buttons (e.g., \"Find My Next Adventure\", \"Next\", \"Choose This Adventure\") are orange, while primary action buttons within modals (e.g., \"Dismiss Quest\", \"Apply Preferences\") are green.",
+              "recommendation": "Standardize the color for all primary action buttons throughout the application to a single, consistent color (e.g., orange) to clearly indicate the main action to the user.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The interface lacks an explicit 'save for later' or 'bookmark' feature for individual recommendations, which could lead to users losing track of interesting options they are not ready to commit to immediately.",
+              "recommendation": "Add a 'Save' or 'Bookmark' button to each recommendation card, allowing users to easily store items they find appealing for future consideration.",
+              "severity": 2
+            },
+            {
+              "description": "There is no direct mechanism for users to rate individual recommendations (e.g., thumbs up/down, star rating), limiting their ability to provide granular feedback on specific items to improve future personalization.",
+              "recommendation": "Implement a simple rating system on each recommendation card, such as a 'Like' or 'Dislike' button, to allow users to give direct feedback on the relevance or quality of individual suggestions.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421082554.json"
+    },
+    {
+      "run_id": "20260421082837",
+      "created_at": "2026-04-21T08:28:37.686407Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 4,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The 'Vibe Tags' on the detailed adventure view (e.g., at 2:27) change color on hover, suggesting interactivity, but their function is not immediately clear from their appearance alone. They look like descriptive labels rather than actionable elements.",
+              "recommendation": "Add a clear visual cue or a tooltip to the 'Vibe Tags' to indicate their interactivity and purpose (e.g., 'Click to filter' or 'Click to add to preferences'). If they are purely descriptive, remove the hover effect that implies interaction.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The interface lacks an explicit 'save for later' or 'bookmark' feature for individual recommendations, which could lead to users losing track of interesting options they are not ready to commit to immediately.",
+              "recommendation": "Add a 'Save' or 'Bookmark' button to each recommendation card, allowing users to easily store items they find appealing for future consideration.",
+              "severity": 2
+            },
+            {
+              "description": "There is no direct mechanism for users to rate individual recommendations (e.g., thumbs up/down, star rating), limiting their ability to provide granular feedback on specific items to improve future personalization.",
+              "recommendation": "Implement a simple rating system on each recommendation card, such as a 'Like' or 'Dislike' button, to allow users to give direct feedback on the relevance or quality of individual suggestions.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421082837.json"
+    },
+    {
+      "run_id": "20260421083105",
+      "created_at": "2026-04-21T08:31:05.144227Z",
+      "provider": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "model_output_name": "gemini-2.5-flash",
+      "video_file": "Pocketquest.mp4",
+      "run_index": 5,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "The 'Vibe Tags' displayed on the recommendation cards and the detailed adventure view (e.g., 'pastries', 'morning', 'quick') do not visually indicate interactivity, making it unclear if they can be clicked or used for filtering.",
+              "recommendation": "Implement a clear hover state (e.g., cursor change, background highlight) for the 'Vibe Tags' to communicate their interactive nature, if they are intended to be clickable for filtering or further exploration. If they are purely descriptive, consider a different visual style to avoid implying interactivity.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The interface lacks an explicit 'save for later' or 'bookmark' feature for individual recommendations, which could lead to users losing track of interesting options they are not ready to commit to immediately.",
+              "recommendation": "Add a 'Save' or 'Bookmark' button to each recommendation card, allowing users to easily store items they find appealing for future consideration.",
+              "severity": 2
+            },
+            {
+              "description": "There is no direct mechanism for users to rate individual recommendations (e.g., thumbs up/down, star rating), limiting their ability to provide granular feedback on specific items to improve future personalization.",
+              "recommendation": "Implement a simple rating system on each recommendation card, such as a 'Like' or 'Dislike' button, to allow users to give direct feedback on the relevance or quality of individual suggestions.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gemini-2.5-flash/run_20260421083105.json"
+    }
+  ]
+}

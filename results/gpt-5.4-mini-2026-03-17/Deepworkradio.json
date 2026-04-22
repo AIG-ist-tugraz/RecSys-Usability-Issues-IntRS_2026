@@ -1,0 +1,1102 @@
+{
+  "model_output_name": "gpt-5.4-mini-2026-03-17",
+  "video_file": "Deepworkradio.mp4",
+  "providers": [
+    "openai"
+  ],
+  "model_names": [
+    "gpt-5.4-mini-2026-03-17"
+  ],
+  "merged_at": "2026-04-21T11:56:22.554625+00:00",
+  "run_count": 5,
+  "total_criteria_results": 55,
+  "successful_criteria_results": 55,
+  "failed_criteria_results": 0,
+  "runs": [
+    {
+      "run_id": "20260421090642",
+      "created_at": "2026-04-21T09:06:42.610482Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 1,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The page uses a very long single-column scroll with large vertical gaps between sections, so the overall structure feels stretched and harder to scan quickly.",
+              "recommendation": "Reduce excessive vertical spacing and group related content into tighter sections or a multi-column layout to make the page hierarchy easier to follow.",
+              "severity": 2
+            },
+            {
+              "description": "Several sections rely on low-contrast text and subtle borders on a dark background, which makes the visual grouping of cards and labels harder to distinguish at a glance.",
+              "recommendation": "Increase contrast for section labels, card borders, and secondary text, and use stronger spacing or background separation to clarify each content block.",
+              "severity": 2
+            },
+            {
+              "description": "In the session history view, the timeline items and summary cards are arranged in a dense, repetitive stack with similar styling, making it difficult to visually separate key information from supporting details.",
+              "recommendation": "Differentiate summary metrics from timeline entries with clearer grouping, stronger headings, and more distinct card styling or dividers.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only buttons or very subtle iconography (e.g., the small circular control beside play/pause, the top-right toolbar icons), making it hard to immediately recognize what they do.",
+              "recommendation": "Add visible text labels or tooltips for icon-only controls, and increase icon contrast/size so their actions are understandable at a glance.",
+              "severity": 2
+            },
+            {
+              "description": "Some interactive cards and controls are only distinguishable by a thin border or slight color change on hover/selection, which makes them easy to miss as clickable elements.",
+              "recommendation": "Strengthen affordance with clearer button styling, stronger hover states, and more explicit selected-state treatment (e.g., filled background, checkmark, or label change).",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Several recommendation cards and status panels show multiple data points at once (genre, energy, track count, BPM, timeline, and explanatory text), making individual items visually dense and harder to scan quickly.",
+              "recommendation": "Reduce each item to the most important 1–2 fields by default and move secondary details into expandable sections or tooltips.",
+              "severity": 2
+            },
+            {
+              "description": "The session history view presents repeated per-track rows with BPM, duration, and distraction labels alongside progress bars, creating a crowded list where the key takeaway for each item is not immediately clear.",
+              "recommendation": "Prioritize one primary metric per row and collapse or de-emphasize secondary metrics so users can compare tracks more easily.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected state is shown inconsistently across controls: task cards use a filled teal background with a checkmark, while the energy slider uses only a blue knob and label change, and the music preference cards use a different filled style. This makes it harder to recognize which elements are selected at a glance.",
+              "recommendation": "Use one consistent selected-state pattern across all selectable controls, such as the same accent border plus fill and checkmark treatment, and apply it uniformly to task cards, slider states, and music preference cards.",
+              "severity": 2
+            },
+            {
+              "description": "The same accent color is used for multiple meanings in different parts of the interface, including active selections, the primary button, progress indicators, and status notifications. Because the color carries several roles, the visual language is less consistent and can be harder to interpret quickly.",
+              "recommendation": "Reserve the accent color for one primary meaning, then assign distinct but related colors or treatments for progress, notifications, and selection states so each function is visually distinct.",
+              "severity": 2
+            },
+            {
+              "description": "The interface shows different visual emphasis for similar action buttons across screens, with the primary action changing from a bright cyan button on the landing page to a more subdued button style in the session view and modal dialogs. This weakens consistency in how primary actions are identified.",
+              "recommendation": "Standardize the primary button style across all screens, including color, contrast, and hover/active states, so the main action is immediately recognizable everywhere.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface lets users choose a task, energy level, and music genre, but there is no visible control for explicitly rating tracks or marking likes/dislikes during playback. This limits direct preference expression to only the initial setup and recalibration flow.",
+              "recommendation": "Add clear in-player preference controls such as like/dislike, star ratings, or skip-with-feedback actions, and make them persistently available during playback.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after selecting task, energy level, and music preference, but it does not explain which specific input caused each change until much later in the session. Early screens provide no immediate feedback linking a selection to the resulting playlist.",
+              "recommendation": "Show a brief inline explanation or preview after each selection, such as \"Writing + Lo-Fi Beats increases instrumental focus\" and update the recommendation summary in real time.",
+              "severity": 2
+            },
+            {
+              "description": "When the playlist recalibrates during playback, the change is visible only as a new track and a small toast message; the relationship between the user’s prior input and the updated recommendation is not clearly surfaced in the main UI.",
+              "recommendation": "Add a persistent recommendation summary panel that states which inputs are currently driving the playlist and why the current track was chosen.",
+              "severity": 3
+            },
+            {
+              "description": "The session history view lists tracks and distraction states, but it does not clearly connect earlier user inputs to the tracks that were recommended, making it hard to understand how past input affected the system over time.",
+              "recommendation": "Include per-track rationale in session history, showing the task, energy level, and preference that led to each recommendation.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The session setup flow requires users to choose a task, energy level, and music preference before the Start Session button becomes active; there is no visible option to skip any of these inputs or proceed with defaults.",
+              "recommendation": "Allow users to start with partial input by enabling a default recommendation, or add explicit \"Skip for now\" / \"Use recommended defaults\" actions for each step.",
+              "severity": 3
+            },
+            {
+              "description": "During playback, the interface shows controls for pause, next track, volume, and recalibration, but no visible undo or back action for reversing a recent preference change or recalibration choice.",
+              "recommendation": "Add a clear undo/revert control after preference updates and recalibration actions, such as \"Undo last change\" or \"Restore previous playlist.\"",
+              "severity": 2
+            },
+            {
+              "description": "The recalibration modal offers three adjustment choices and a cancel action, but there is no visible way to back out after selecting one if the resulting playlist is not desired.",
+              "recommendation": "Provide an immediate undo or \"Revert recalibration\" option after applying a recalibration, and keep the previous state accessible for quick restoration.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "Several recommendation-related labels are visible only after scrolling or interacting, and the initial landing view does not clearly indicate that the content is personalized recommendations rather than general marketing content.",
+              "recommendation": "Add an explicit, persistent label near the recommendation area such as \"Recommended for you\" or \"Your recommendations\" and surface it above the fold on the first screen.",
+              "severity": 2
+            },
+            {
+              "description": "In the playback view, the currently playing track and queue are shown, but the recommendation rationale is presented in a low-contrast box and is easy to miss, making the recommended nature of the track less obvious.",
+              "recommendation": "Increase the prominence of the recommendation explanation with a clearer heading like \"Why this track was recommended\" and stronger contrast/placement near the track title.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by genre and icon, but the interface does not clearly label why a specific track is being recommended until much later in the session. The initial playlist view shows track names and metadata without an explicit 'because you liked...' style explanation.",
+              "recommendation": "Add a short rationale label on each recommendation card or in the playlist header, such as 'Recommended because you selected Writing' or 'Matched to your current energy level,' so users can distinguish recommendation types at a glance.",
+              "severity": 2
+            },
+            {
+              "description": "When the playlist updates after changing preferences, the new tracks appear without a clear on-screen explanation of what recommendation type changed (task, energy, or music preference). This makes it hard to distinguish whether the update was driven by one factor or several.",
+              "recommendation": "Show a concise update summary after preference changes, for example 'Updated for Writing + Ambient Piano + 64 BPM,' and keep the reason visible near the refreshed recommendations.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended tracks are shown with titles and BPM, but the interface does not explain why each specific track was selected for the user. The only visible rationale is a generic match note on the player, which is not tied to individual recommendations in the queue.",
+              "recommendation": "Add per-track explanations in the recommendation list, such as badges or short text showing which user preferences or session signals caused each item to be recommended.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation controls are limited to a single feedback action in the player (a small recalibration/feedback icon); there is no clearly visible way to rate, hide, or save individual recommended tracks from the recommendation list shown.",
+              "recommendation": "Add explicit per-track actions in the queue/player, such as thumbs up/down, hide, and save/bookmark buttons, with clear labels or tooltips.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421090642.json"
+    },
+    {
+      "run_id": "20260421091040",
+      "created_at": "2026-04-21T09:10:40.543596Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 2,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The page uses a very tall, scroll-heavy layout with large gaps between sections, so the overall structure feels fragmented rather than clearly organized.",
+              "recommendation": "Reduce vertical spacing and group related content into tighter sections or a clearer step-by-step flow so users can scan the page more easily.",
+              "severity": 2
+            },
+            {
+              "description": "Several sections repeat similar card-based content with minimal visual differentiation, making it harder to understand the hierarchy between informational blocks and primary actions.",
+              "recommendation": "Strengthen hierarchy by using more distinct section headers, consistent card sizing, and clearer separation between explanatory content and interactive controls.",
+              "severity": 2
+            },
+            {
+              "description": "In the session history view, the timeline and summary cards are visually dense and extend beyond the visible area, which makes the layout harder to parse at a glance.",
+              "recommendation": "Condense the history layout by prioritizing key metrics, shortening row height, and using clearer grouping or collapsible sections for detailed entries.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only or very subtle icon+text treatments, such as the small circular buttons in the player and the preference/recalibration options, making it harder to immediately recognize what is interactive versus decorative. The low-contrast outlines and glow effects also make some clickable cards look more like static panels than buttons.",
+              "recommendation": "Increase visual affordance for interactive elements by using stronger button styling, clearer hover/focus states, and labels or tooltips for icon-only controls. Make clickable cards look more button-like with consistent borders, elevation, and cursor feedback.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Several recommendation cards show only a title and a short descriptor, but the main playback screen adds multiple extra metrics and labels (BPM, energy, queue count, tags, timeline status), making individual items feel information-heavy and harder to scan.",
+              "recommendation": "Reduce each item to the most decision-relevant fields on the list view, and move secondary details into an expandable panel or hover tooltip.",
+              "severity": 2
+            },
+            {
+              "description": "The session history/timeline view presents dense per-track information with multiple values on each row, including track name, artist, BPM, duration, and distraction status, which makes each item visually crowded.",
+              "recommendation": "Prioritize one primary label and one or two supporting details per row, and collapse the rest behind an expand action or detail drawer.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected state is shown inconsistently across controls: task and music cards use a filled cyan background, while the energy slider uses only a cyan label and knob, and the recalibration modal uses a cyan outline instead of the same filled treatment.",
+              "recommendation": "Use one consistent selected-state pattern across all interactive controls, such as a shared fill, border, and checkmark treatment, and apply it uniformly to cards, sliders, and modal choices.",
+              "severity": 2
+            },
+            {
+              "description": "The same cyan accent color is used for multiple meanings, including primary actions, selected options, and the active playback/progress indicator, which makes state cues harder to distinguish.",
+              "recommendation": "Reserve the accent color for one primary meaning or differentiate states with additional cues such as shape, fill, or iconography so action buttons, selections, and progress indicators are visually distinct.",
+              "severity": 2
+            },
+            {
+              "description": "The interface mixes icon styles and emphasis levels across sections: some icons are cyan line icons in dark squares, others are gray outline icons, and the selected/recalibration icons change treatment again.",
+              "recommendation": "Standardize icon style, stroke weight, and active/inactive coloring across the product, and define a single icon system for default, hover, and selected states.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface lets users choose task, energy level, and music genre, but no explicit rating, like/dislike, or category-preference control is visible on the playback screen itself. Preference changes appear limited to indirect recalibration options rather than direct feedback on individual recommendations.",
+              "recommendation": "Add clear explicit preference actions on the recommendation/player view, such as like/dislike buttons, star ratings, and category tags, and make them easy to access while listening.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that changing task, energy level, and music preference updates the playlist, but it does not explain how each input influences the recommendation logic until much later in the flow.",
+              "recommendation": "Add short inline explanations near each control describing the effect on recommendations, such as how task, energy, and genre map to BPM, complexity, and track selection.",
+              "severity": 2
+            },
+            {
+              "description": "During playback, the system updates the track and shows brief status toasts, but it does not clearly connect the user's earlier selections to the specific recommendation changes in a persistent, easy-to-scan way.",
+              "recommendation": "Display a persistent summary panel that lists the active inputs and the resulting recommendation rules or attributes, and update it whenever a preference changes.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The session setup flow requires users to complete multiple selections and a slider before starting, but no visible skip or clear reset option is shown for quickly bypassing or undoing choices during setup.",
+              "recommendation": "Add explicit controls to skip optional questions and reset the form to defaults, so users can proceed or recover from mistakes without reworking the entire setup.",
+              "severity": 2
+            },
+            {
+              "description": "During playback, the interface exposes pause, next, volume, and recalibration controls, but there is no clearly visible undo or revert action after changing preferences or triggering recalibration.",
+              "recommendation": "Provide a persistent undo/revert control or a clear way to restore the previous playlist and settings after any recalibration or preference update.",
+              "severity": 3
+            },
+            {
+              "description": "The recalibration modal offers three adjustment choices and a cancel action, but once a recalibration choice is made there is no visible confirmation step or easy way to back out before the playlist changes.",
+              "recommendation": "Add a brief confirmation or a reversible toast after recalibration, allowing users to cancel or revert the change immediately if they selected the wrong option.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The recommendation cards are labeled with track names and descriptive metadata, but the interface does not explicitly mark them as recommendations on the main playback screen. Users may not immediately realize the listed tracks are system-generated suggestions rather than a generic playlist.",
+              "recommendation": "Add a clear label such as \"Recommended for you\" or \"AI recommendations\" above the track list and repeat it in the queue area so the recommendation source is obvious at a glance.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by icons and labels, but the recommendation type itself is not explicitly labeled on the main playback screen; the user must infer why each track was chosen from the small explanatory text. This makes it harder to distinguish recommendation categories at a glance.",
+              "recommendation": "Add clear category labels or badges near each recommendation and in the player header, such as \"Because you selected Writing\" or \"Matched to Low Energy,\" so the recommendation basis is immediately visible.",
+              "severity": 2
+            },
+            {
+              "description": "The session history and playback views show track names, BPM, and energy, but the interface does not consistently surface which recommendation rule or source produced each track. As a result, different recommendation types are not easy to tell apart once playback starts.",
+              "recommendation": "Display a persistent recommendation tag for each track and in the queue/history list, using distinct wording and color coding for task-based, energy-based, and genre-based recommendations.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended tracks are shown with titles and metadata, but the interface does not explain why each specific item was selected in the recommendation list itself.",
+              "recommendation": "Add a short per-item explanation or badge near each recommendation, such as the matched task, energy level, or music traits that caused the item to be recommended.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The interface exposes a feedback/recalibration control during playback, but no visible way to rate, hide, or save individual recommendations is shown anywhere in the recording. Users can adjust preferences, yet they cannot directly act on specific recommended tracks from the recommendation or queue views.",
+              "recommendation": "Add clear per-track actions such as thumbs up/down, hide, save/bookmark, or a context menu on each recommendation and queued item, and keep them visible in the playback and queue panels.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421091040.json"
+    },
+    {
+      "run_id": "20260421091355",
+      "created_at": "2026-04-21T09:13:55.623440Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 3,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "The page uses a very long, vertically stacked layout with repeated large cards and wide empty gaps, which makes the overall structure feel stretched and harder to scan.",
+              "recommendation": "Group related content into fewer sections, reduce vertical spacing, and use clearer section boundaries or a sidebar to keep the layout compact and easier to follow.",
+              "severity": 2
+            },
+            {
+              "description": "Several screens show dense cards with multiple labels, icons, and values packed into the same area, especially in the session and preferences views, which weakens visual hierarchy.",
+              "recommendation": "Increase spacing within cards, simplify each card to one primary action or message, and use stronger typographic hierarchy to separate headings, values, and supporting text.",
+              "severity": 2
+            },
+            {
+              "description": "The interface relies on similar dark cards with subtle borders across many sections, so different content blocks blend together and are not always visually distinct.",
+              "recommendation": "Differentiate major sections with clearer background contrast, stronger dividers, or section headers so users can immediately see where one block ends and the next begins.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only or low-contrast icon buttons (e.g., the small circular control beside the play/pause button and the top-right toolbar icons), making their clickability and purpose hard to recognize at a glance.",
+              "recommendation": "Add visible labels or tooltips for icon-only controls and increase their contrast/size so they read as interactive elements immediately.",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation cards and session cards look like selectable controls, but their interactive state is subtle and easy to miss until hover/selection changes appear.",
+              "recommendation": "Strengthen affordance with clearer button styling such as stronger borders, hover states, and a consistent selected-state treatment across all clickable cards.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Several recommendation cards and playback panels show only a title plus one or two metrics, but the meaning of some metrics is unclear without more context (for example, BPM, energy %, tracks queued). This makes the item-level information feel dense in some places and under-explained in others.",
+              "recommendation": "Add short supporting labels or tooltips for key metrics and keep each card focused on the most decision-relevant 2–3 fields.",
+              "severity": 2
+            },
+            {
+              "description": "The session history list uses compact rows with track title, artist, BPM, and status, but the negative duration values and repeated distraction labels are hard to interpret at a glance. The amount of information per item is not well balanced for quick review.",
+              "recommendation": "Simplify each history row to the essential summary fields and move detailed timing/distraction data into an expandable detail view.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected state styling is inconsistent across controls: task cards, music preference cards, slider positions, and action buttons use different combinations of cyan fill, cyan outline, checkmarks, and text color changes. This makes it harder to quickly recognize which elements are selected or active.",
+              "recommendation": "Use one consistent selected-state pattern for all selectable controls (e.g., same border color, same fill treatment, and same checkmark placement) and apply it uniformly to cards, sliders, and buttons.",
+              "severity": 2
+            },
+            {
+              "description": "The primary action button changes appearance and label across screens and states, appearing as \"Enter My Studio,\" \"Start Session,\" and later as a different control set in the player view. The varying emphasis and styling make the main action less predictable from one step to the next.",
+              "recommendation": "Standardize the primary action style and naming convention across the flow, and keep secondary actions visually distinct but consistent in placement and treatment.",
+              "severity": 2
+            },
+            {
+              "description": "Status/toast messages use different visual treatments and colors for similar feedback, including cyan success notices and red warning-style notices, without a consistent pattern visible across the flow. This inconsistency can make it harder to interpret whether a message is informational, positive, or corrective.",
+              "recommendation": "Define a consistent feedback system with fixed colors and iconography for success, warning, and informational messages, and reuse it for all session updates and notifications.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface only exposes preference inputs during the initial setup and in a later \"Preferences\" modal; there is no visible way to explicitly rate or like/dislike individual tracks while listening. This limits users to coarse session-level preferences rather than direct feedback on specific recommendations.",
+              "recommendation": "Add per-track feedback controls in the player and queue, such as like/dislike, star ratings, or skip-with-reason actions, and make them persistently available during playback.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that changing task, energy, or music preference updates the playlist, but it does not explain how those inputs influence the recommendation logic beyond broad labels like BPM or genre. Users cannot see which specific input caused a given track choice or why the playlist changed.",
+              "recommendation": "Add inline explanations or a visible “Why this track?” panel that maps each selected input to the resulting recommendation factors (e.g., task → lower vocals, energy → BPM range, genre → texture).",
+              "severity": 3
+            },
+            {
+              "description": "After adjusting preferences, the playlist changes immediately, but the screen provides only brief outcome labels such as “Tempo Increased” or “Complexity Reduced,” which do not clearly connect the user’s action to the recommendation update. This makes the effect of input feel opaque.",
+              "recommendation": "Show a concise before/after summary when preferences change, such as “Because you selected Ambient Piano and lower energy, we switched to 64 BPM instrumental tracks,” and keep it visible near the updated playlist.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The session setup appears to require selecting both a task and a music preference before the Start Session button becomes active; there is no visible option to skip either step or proceed with defaults.",
+              "recommendation": "Provide a clear skip/default path for each setup step, or allow users to start the session with partial inputs and refine preferences later.",
+              "severity": 3
+            },
+            {
+              "description": "During playback, the interface shows controls for pause, next track, volume, and recalibration, but no visible undo or revert action after changing preferences or recalibrating the playlist.",
+              "recommendation": "Add an explicit undo/revert control or a temporary confirmation with an easy rollback after preference changes and recalibration actions.",
+              "severity": 2
+            },
+            {
+              "description": "The recalibration modal offers only three adjustment choices and a cancel action; there is no visible way to back out of a recalibration choice once selected or to restore the previous playlist state from the modal.",
+              "recommendation": "Include a back/undo option in the recalibration flow and preserve the prior playlist state so users can revert immediately after applying a recalibration.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The recommendation cards are labeled with music titles and artist names, but the interface does not explicitly identify them as recommendations. The only recommendation-specific wording appears later in the flow, so users may not immediately recognize these items as suggested content.",
+              "recommendation": "Add a clear label such as \"Recommended for you\" or \"Your recommendations\" directly above the recommendation cards, and keep that label visible wherever suggested tracks are shown.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation types are only partially distinguishable in the playlist and session views: items show track names and BPM, but the interface does not consistently label why each track was recommended (for example, by task, energy level, or music preference).",
+              "recommendation": "Add a short, visible reason label on each recommendation card and in the queue, such as \"Because you selected Writing\" or \"Matched to Low Energy,\" so users can quickly tell recommendation types apart.",
+              "severity": 2
+            },
+            {
+              "description": "The recommendation rationale is shown in a small, low-contrast message near the player, making it easy to miss and hard to use for distinguishing why the current track differs from others.",
+              "recommendation": "Prominently surface the recommendation reason in the main track card or beside the title, using stronger contrast and a consistent label format across all recommendation types.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended tracks are shown with titles and metadata, but the interface does not explain why each specific item was selected in the recommendation list itself. The only visible rationale appears later in a generic summary, which is easy to miss when choosing among items.",
+              "recommendation": "Add a short, item-level explanation on each recommended track card or row (for example, \"Matched your writing task, 0% vocals, 75 BPM\") so users can see the reason before selecting a track.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The recommendation cards in the player view expose only a small circular action icon, and the recording does not show any clear way to rate, hide, or save individual tracks from the recommendation list itself.",
+              "recommendation": "Add explicit, labeled controls on each recommendation item for actions such as Like/Dislike, Hide, and Save, and make them visible without requiring hover or opening a separate menu.",
+              "severity": 3
+            },
+            {
+              "description": "The queue/list view shows track rows and playback controls, but no visible per-track interaction for saving or hiding items in the recommendation queue.",
+              "recommendation": "Provide per-row action buttons or a context menu in the queue so users can directly save, hide, or rate tracks from the list.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421091355.json"
+    },
+    {
+      "run_id": "20260421091653",
+      "created_at": "2026-04-21T09:16:53.187070Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 4,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "Several sections use very similar dark cards with thin borders and limited spacing, so the page can feel visually flat and the hierarchy between sections is not immediately obvious.",
+              "recommendation": "Increase vertical spacing between major sections and use stronger section dividers or background contrast to separate content blocks more clearly.",
+              "severity": 2
+            },
+            {
+              "description": "Some labels and supporting text appear low-contrast against the dark background, especially in the configuration and session views, which makes the structure harder to scan.",
+              "recommendation": "Raise text contrast for secondary labels and descriptions, or use brighter text and clearer typographic weight differences to improve readability and hierarchy.",
+              "severity": 2
+            },
+            {
+              "description": "In the session history view, the metric cards and timeline items are aligned in a dense grid with similar styling, making it harder to distinguish summary metrics from detailed entries at a glance.",
+              "recommendation": "Differentiate summary metrics from timeline content with stronger visual grouping, such as a separate header band, more spacing, or distinct card styling for each content type.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only or low-contrast icon buttons (e.g., the small circular control beside play/pause and the top-right toolbar icons), making their click targets and functions hard to recognize at a glance.",
+              "recommendation": "Add visible text labels or tooltips for icon-only controls and increase contrast/size so interactive elements are clearly distinguishable from decorative graphics.",
+              "severity": 2
+            },
+            {
+              "description": "The large circular visual in the player area resembles a decorative album/visualizer element, but it is not immediately clear whether it is interactive or purely informational.",
+              "recommendation": "If the visual is interactive, add a clear affordance such as hover state, cursor change, or label; if not, reduce its button-like styling so users do not mistake it for a control.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Several recommendation cards and session-history rows show only a title plus a few metadata fields, but the main recommendation list uses very little distinguishing information, making items hard to compare at a glance.",
+              "recommendation": "Add one or two high-value differentiators per item, such as a short rationale, mood/energy tags, or a brief preview of why it was selected, while keeping the layout compact.",
+              "severity": 2
+            },
+            {
+              "description": "The session-history timeline entries are visually dense and repetitive, with similar-looking rows and minimal content beyond track name, BPM, and duration, which makes it hard to scan the list quickly.",
+              "recommendation": "Reduce repetition by grouping repeated metadata into columns or chips and highlighting the most important status information more prominently, such as match quality or distraction state.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected state is shown inconsistently across controls: task and music cards use a cyan filled background, while the energy slider uses only a cyan knob/label and the playback controls use a different accent treatment. This makes it harder to recognize which visual cue means 'selected' versus 'active' across the interface.",
+              "recommendation": "Define one selected-state pattern (e.g., cyan border plus subtle fill and checkmark) and apply it consistently to cards, sliders, and controls, with a shared token for active/selected styling.",
+              "severity": 2
+            },
+            {
+              "description": "The same iconography appears to change meaning or styling across sections: the music-note icon is used for both music preference and recalibration options, but with different container treatments and emphasis levels. The visual language is close enough to feel related, yet not consistent enough to clearly signal the same interaction pattern.",
+              "recommendation": "Standardize icon containers, sizes, and active-state styling for all option tiles, or use distinct icons for distinct actions so repeated symbols always imply the same behavior.",
+              "severity": 2
+            },
+            {
+              "description": "Color is used inconsistently to indicate status and emphasis: cyan marks selected items, but red appears only in the session history and recalibration modal, and some buttons switch between cyan fill and dark outline depending on context. The meaning of these colors is not consistently reinforced on screen.",
+              "recommendation": "Create a small, explicit color system for primary action, selection, warning/error, and inactive states, then apply it uniformly across all screens and components.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface lets users choose task, energy level, and music genre, but there is no visible control for explicit preference feedback such as likes, dislikes, or ratings on individual tracks. The only feedback-like action shown is a recalibration dialog, which is not a direct preference expression.",
+              "recommendation": "Add clear per-track preference controls such as like/dislike, star ratings, or skip/ban actions in the player and queue so users can explicitly shape recommendations.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that recommendations change after selecting task, energy, and music preference, but it does not clearly explain how each input affects the resulting playlist until after the session starts. The relationship between the controls and the recommendation outcome is only partially revealed through small labels and later playback changes.",
+              "recommendation": "Add a concise, persistent explanation near each input showing the specific effect on recommendations, such as 'Task sets genre mix,' 'Energy adjusts BPM,' and 'Music preference changes instrumentation.' Include a live preview or summary before starting the session.",
+              "severity": 2
+            },
+            {
+              "description": "During the session, the recommendation logic is only explained in a small text box below the player, which is easy to miss and does not clearly connect the current track to the selected inputs. The user has to infer why the playlist changed from the track title and brief status messages.",
+              "recommendation": "Prominently surface a recommendation rationale panel near the currently playing track that updates whenever the playlist changes, explicitly linking the selected inputs to the new track choice. Use clearer language such as 'Because you chose Writing + Low Energy, we switched to lower-BPM ambient piano.'",
+              "severity": 2
+            },
+            {
+              "description": "When the user opens the recalibration dialog, the options describe broad changes like 'Too Slow' or 'Change Texture' but do not explain how choosing one will alter future recommendations. This makes it unclear how the feedback will influence the next playlist update.",
+              "recommendation": "Add short explanatory text under each recalibration option describing the resulting recommendation change, for example 'Increase BPM and energy,' 'Reduce complexity and density,' or 'Switch to a different instrumental style.'",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "The session flow appears to require completing the preference setup before playback starts; there is no visible way to skip the setup or start with defaults from the initial screen.",
+              "recommendation": "Add a clearly labeled skip/default-start option so users can begin listening without answering every setup step.",
+              "severity": 3
+            },
+            {
+              "description": "During playback, the interface shows controls for pause, next track, volume, recalibration, preferences, and end/review, but no visible undo or revert action for accidental preference changes made in the recalibration/preferences dialogs.",
+              "recommendation": "Provide an explicit undo/reset control or a confirmation with a revert option after preference updates so users can quickly restore the previous playlist settings.",
+              "severity": 3
+            },
+            {
+              "description": "The recalibration modal offers only three adjustment choices plus cancel, but no visible way to step back or undo a recalibration after it is applied.",
+              "recommendation": "Add an immediate undo toast or a 'restore previous playlist' action after recalibration so users can reverse the change without reopening settings.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The recommendation explanation is shown only as a small, low-contrast sentence beneath the player, while the main track title and controls dominate the screen. This makes it easy to miss that the music is being tailored based on the user's inputs.",
+              "recommendation": "Add a clearer, more prominent label such as \"Recommended for you\" or \"Curated for Writing\" near the track title or playlist header, and increase contrast/size of the explanation text.",
+              "severity": 2
+            },
+            {
+              "description": "In the session history view, the listed tracks appear without an explicit recommendation label, so they read like a generic playback history rather than recommended items. The recommendation status is not immediately visible.",
+              "recommendation": "Mark recommended tracks with a visible badge or section heading such as \"Recommended tracks\" or \"Your recommendations\" in the history/timeline list.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by icons and labels, but the recommendation type is not explicitly labeled in the main browsing view, so users must infer why each track is shown.",
+              "recommendation": "Add a short, consistent reason label on each recommendation card (for example, \"Because you liked Lo-Fi Beats\" or \"Matched to Writing\") so the basis for each item is immediately visible.",
+              "severity": 2
+            },
+            {
+              "description": "In the playback view, the currently playing track and the queue items are shown with titles and BPM, but there is no clear on-screen explanation of why each track is in the queue or how it differs from the others.",
+              "recommendation": "Display a concise rationale or category tag beside each queued track, such as task match, energy level, or texture, to make recommendation types distinguishable at a glance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended tracks are shown with titles and BPM, but the interface does not explain why a specific track was selected until much later in the session flow. The recommendation rationale is not visible at the point where the user first sees the playlist.",
+              "recommendation": "Show a short reason directly on each recommended track card, such as matching task, energy level, and music preference, with an optional \"Why this?\" detail view.",
+              "severity": 3
+            },
+            {
+              "description": "The explanation text appears only after playback starts and is presented in a small, low-contrast panel, making the recommendation logic easy to miss. This reduces the usefulness of the explanation when users are deciding whether to trust the playlist.",
+              "recommendation": "Increase the prominence and contrast of the rationale panel, or place a concise explanation beside the track title and metadata so it is immediately readable.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "Recommendation cards in the playback view expose only a small circular action icon, and the recording does not show any clear way to rate, hide, or save individual recommended tracks from the queue/list. This makes it hard to directly interact with recommendations beyond passive playback.",
+              "recommendation": "Add explicit, labeled controls on each recommended track row/card for actions such as Like/Dislike, Hide, and Save, and keep them visible in the queue and now-playing views.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421091653.json"
+    },
+    {
+      "run_id": "20260421091925",
+      "created_at": "2026-04-21T09:19:25.647672Z",
+      "provider": "openai",
+      "model_name": "gpt-5.4-mini-2026-03-17",
+      "model_output_name": "gpt-5.4-mini-2026-03-17",
+      "video_file": "Deepworkradio.mp4",
+      "run_index": 5,
+      "runtime": {
+        "temperature": 0.0,
+        "top_p": null,
+        "max_tokens": 2000,
+        "video_frame_interval_seconds": 1.0,
+        "video_max_frames": 500
+      },
+      "criteria_results": [
+        {
+          "criterion_id": "G1",
+          "scenario": "general",
+          "criterion": "Is the layout clear and visually structured?",
+          "issues": [
+            {
+              "description": "Several sections use very similar dark cards with thin borders and limited spacing, so the page can feel visually flat and the hierarchy between sections is not immediately obvious.",
+              "recommendation": "Increase separation between major sections with stronger vertical spacing, clearer section headers, and more distinct container styling or background contrast.",
+              "severity": 2
+            },
+            {
+              "description": "In the session setup and playback views, multiple controls and cards are aligned in dense grids with repeated visual patterns, which makes it harder to quickly distinguish primary actions from secondary information.",
+              "recommendation": "Strengthen hierarchy by emphasizing the main action button and key controls, while reducing visual weight on supporting cards and labels.",
+              "severity": 2
+            },
+            {
+              "description": "Some text and labels appear low-contrast against the dark background, especially in smaller descriptive text, making the structure harder to scan.",
+              "recommendation": "Increase text contrast and/or font weight for secondary labels and descriptions to improve readability and visual structure.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G2",
+          "scenario": "general",
+          "criterion": "Are interactive elements (e.g., buttons, icons) clearly recognizable?",
+          "issues": [
+            {
+              "description": "Several controls rely on icon-only buttons or cards with subtle outlines and no explicit labels, especially in the player and recalibration modal, making it harder to immediately recognize what is interactive.",
+              "recommendation": "Add clear text labels or tooltips to icon-only controls and strengthen button affordances with more distinct hover/focus states and contrast.",
+              "severity": 2
+            },
+            {
+              "description": "Some interactive cards and controls look visually similar to static content blocks, so their clickability is not always obvious at first glance.",
+              "recommendation": "Differentiate interactive elements with stronger button styling, pointer cues, and consistent selected/hover states across all clickable cards.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G3",
+          "scenario": "general",
+          "criterion": "Is the amount of information per item appropriate and helpful?",
+          "issues": [
+            {
+              "description": "Several recommendation cards show only a title, icon, and a short descriptor, but no concrete item details such as duration, artist/source, or why the item is recommended. This makes the item-level information feel sparse and less actionable.",
+              "recommendation": "Add one or two high-value details per card, such as track length, source/artist, or a brief reason for recommendation, while keeping the layout compact.",
+              "severity": 2
+            },
+            {
+              "description": "In the session history view, each played track is shown with minimal item information beyond title, BPM, and a distraction label. The list does not provide enough context to quickly understand what each item was or why it mattered in the session.",
+              "recommendation": "Expand each history row with a concise summary such as genre/texture, recommendation reason, or a small performance metric so users can interpret items at a glance.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "G4",
+          "scenario": "general",
+          "criterion": "Are interface elements used consistently (e.g., icons, labels, colors)?",
+          "issues": [
+            {
+              "description": "The selected state styling is inconsistent across controls: task cards, music preference cards, the energy slider, and playback controls use different highlight treatments (filled teal, bright outline, or red accent for a warning icon). This makes it harder to quickly recognize which elements are active or selected.",
+              "recommendation": "Use one consistent selected-state pattern across all interactive cards and controls, with the same accent color, border treatment, and checkmark/indicator placement.",
+              "severity": 2
+            },
+            {
+              "description": "The same iconography appears to change meaning by context, and some icons are reused with different visual emphasis in different sections (for example, the music-note icon appears in multiple places with different colors and states). This weakens the visual consistency of the interface language.",
+              "recommendation": "Standardize icon usage so each icon has a single, consistent meaning and style, and apply the same color rules for default, hover, and selected states throughout the product.",
+              "severity": 2
+            },
+            {
+              "description": "Primary action buttons are styled inconsistently across screens: 'Enter My Studio' and 'Start Session' use similar cyan fills, while other actions such as 'Update Playlist' appear disabled or much less prominent even when shown alongside active controls. The varying emphasis can make action hierarchy unclear.",
+              "recommendation": "Define a consistent button hierarchy for primary, secondary, and disabled actions, and apply it uniformly across all screens and dialogs.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P1",
+          "scenario": "preference_elicitation",
+          "criterion": "Can users explicitly express preferences (e.g., ratings, likes, categories)?",
+          "issues": [
+            {
+              "description": "The interface lets users express preferences through task, energy, and music selections, but there is no visible control for explicit positive/negative feedback on individual recommendations or tracks (e.g., like/dislike, rating, skip preference).",
+              "recommendation": "Add clear feedback actions on each track and in the player, such as thumbs up/down, star ratings, or a 'more like this / less like this' control, and make the effect of each action visible.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P2",
+          "scenario": "preference_elicitation",
+          "criterion": "Is there transparency about how input affects recommendations?",
+          "issues": [
+            {
+              "description": "The interface shows that task, energy level, and music preference change the playlist, but it does not explain how those inputs map to specific recommendation changes until after the session starts.",
+              "recommendation": "Add brief inline explanations near each control describing the effect on recommendations, such as how task affects genre, energy affects BPM, and music preference affects instrumentation.",
+              "severity": 2
+            },
+            {
+              "description": "When the user adjusts inputs, the resulting recommendation logic is only revealed later in a small summary, making the connection between input changes and playlist updates hard to understand in the moment.",
+              "recommendation": "Show immediate, visible feedback after each input change, such as a short 'why this changed' message or a live preview of the affected recommendation attributes.",
+              "severity": 2
+            },
+            {
+              "description": "The session history and recalibration screens show outcomes like BPM and playlist changes, but they do not clearly tie those changes back to the specific user inputs that caused them.",
+              "recommendation": "Include a compact explanation panel that links each recommendation update to the exact inputs used, for example 'Writing + Ambient Piano + 85% energy → 64 BPM ambient tracks.'",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "P3",
+          "scenario": "preference_elicitation",
+          "criterion": "Do users have control and flexibility (e.g., skip, edit, undo inputs)?",
+          "issues": [
+            {
+              "description": "During the listening session, the only visible way to change recommendations is the Preferences button, which opens a modal; there is no obvious skip/next control for the current track or queue from the main player. Users may be forced to wait or use recalibration instead of quickly skipping unwanted content.",
+              "recommendation": "Add a clearly labeled skip/next control in the player and make queue navigation visible so users can move past a track without opening settings.",
+              "severity": 3
+            },
+            {
+              "description": "The session history view shows past tracks and distraction status, but no visible undo or edit action for prior inputs or recalibration choices. Users cannot correct a mistaken preference selection after the session has progressed.",
+              "recommendation": "Provide an edit/undo option in session history or the preferences panel so users can revise task, energy, or genre inputs and regenerate recommendations.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R1",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are recommendations clearly labeled as such?",
+          "issues": [
+            {
+              "description": "The recommendation cards are labeled with task names and music genres, but the interface does not explicitly mark them as recommendations. Users may not realize these are system-generated suggestions rather than selectable categories.",
+              "recommendation": "Add a clear label such as \"Recommended for you\" or \"Your recommendations\" above the recommendation cards, and keep the label visible wherever recommendations appear.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R2",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are different types of recommendations distinguishable (e.g., \"Because you liked...\")?",
+          "issues": [
+            {
+              "description": "Recommendation cards are visually differentiated by icons and titles, but the interface does not clearly label why each track is being recommended until much later in the session. The initial playlist view shows track names without an obvious explanation of the recommendation type or rationale.",
+              "recommendation": "Add a short, persistent label on each recommendation card such as \"Because you selected Writing\" or \"Matched to your energy level\" so users can immediately distinguish recommendation types.",
+              "severity": 2
+            },
+            {
+              "description": "In the session history and playback views, tracks are listed with titles and BPM/energy tags, but the screen does not clearly distinguish which items were generated from user preferences versus which were adjusted by recalibration. This makes different recommendation states hard to tell apart.",
+              "recommendation": "Use distinct badges or section headers for each recommendation state, such as \"Initial recommendation\" and \"Recalibrated recommendation,\" and keep the rationale visible beside each track.",
+              "severity": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R3",
+          "scenario": "recommendation_presentation",
+          "criterion": "Are there explanations for why items are recommended?",
+          "issues": [
+            {
+              "description": "Recommended tracks are shown with titles and metadata, but the interface does not explain why each specific item was recommended in the main playlist view. The only visible rationale appears later in a small message on the player, so the recommendation logic is not transparent when browsing items.",
+              "recommendation": "Show a short, item-level explanation directly on each recommended track card or in an always-visible details panel, such as matched task, energy level, BPM, or vocal level.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "criterion_id": "R4",
+          "scenario": "recommendation_presentation",
+          "criterion": "Can users interact with recommendations (e.g., rate, hide, save)?",
+          "issues": [
+            {
+              "description": "The recommendation cards in the playback view only expose a small alert-style icon for recalibration; there is no clearly visible control to rate, hide, or save individual recommended tracks from the list or player. Users can interact with the playlist only indirectly through the recalibration modal, not per recommendation.",
+              "recommendation": "Add explicit per-track actions in the queue/player view, such as thumbs up/down, hide, and save/bookmark buttons, and make them visible on hover and keyboard-focus states.",
+              "severity": 3
+            }
+          ],
+          "error": null
+        }
+      ],
+      "source_run_file": "experiments/results/gpt-5.4-mini-2026-03-17/run_20260421091925.json"
+    }
+  ]
+}
