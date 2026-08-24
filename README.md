@@ -1,6 +1,6 @@
 # Detecting Usability Issues in Recommender Systems with Multimodal Large Language Models
 
-This repository contains the experiment artifacts and supplementary material for the paper **"Detecting Usability Issues in Recommender Systems with Multimodal Large Language Models"** submitted to **RecSys 2026**.
+This repository contains the experiment artifacts and supplementary material for the paper **"Detecting Usability Issues in Recommender Systems with Multimodal Large Language Models"** presented at **IntRS 2026**.
 
 ## Project Overview
 
